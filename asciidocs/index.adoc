@@ -1,5 +1,5 @@
 = Tour Logger
-1.0.0, yyyy-mm-dd: Some notes
+
 ifndef::imagesdir[:imagesdir: images]
 //:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
 :sourcedir: ../src/main/java
@@ -22,17 +22,18 @@ endif::backend-html5[]
 Der WSV Ottensheim ist ein 1971 gegründeter Wassersportverein mit Schwerpunkt auf Rudern, Kanu und Drachenboot.
 
 === Istzustand
-Mitglieder des Vereins speichern ihr Bootsausfahren in einem Online-Fahrtenbuch um Ihre Leistungen zu verfolgen. Dieses System ist noch nicht ausgereift.
+Mitglieder des Vereins speichern ihre Bootsausfahrten in einem Online-Fahrtenbuch um Ihre Leistungen zu verfolgen. Dieses System ist noch nicht ausgereift.
 
 === Problemstellung
-Das derzeite Fahrtenbuch ist nicht intuitiv und nicht so einfach on the go zu verwenden.
+Das derzeitige Fahrtenbuch ist nicht intuitiv und nicht einfach "on the go" zu verwenden.
 
 === Aufgabenstellung
-Es wird ein Softwaresystem erstellt, welches Vereinsmitglieder erlaubt ganz einfach Ihre Ausfahrten aufzuzeichnen.
+Es wird ein Softwaresystem erstellt, welches Vereinsmitgliedern erlaubt ganz einfach ihre Ausfahrten aufzuzeichnen und zu vergleichen.
 
 ==== Funktionale Anforderungen
 * Erstellung von Fahrten
 * Visuelle Aufarbeitung der Fahrten
+* Vergleich bzw. Auflistung alles Fahrten
 
 ==== Nichtfunktionale Anforderungen (NFA)
 * Robustheit
@@ -40,9 +41,9 @@ Es wird ein Softwaresystem erstellt, welches Vereinsmitglieder erlaubt ganz einf
 * Effizienz
 
 === Ziele
-Mehr und bessere ausfahrtsdaten
-
-=== Mengengerüst
+* Einfachere Erfassung von Ausfahrtsdaten
+* Motivation der Sportler durch Vergleiche mit anderen.
+* Mobile Eingabe/Änderung und darausfolgende Unabhängigkeit vom Boothaus
 
 
 === Rahmenbedingungen

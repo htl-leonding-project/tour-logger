@@ -1,0 +1,52 @@
+@startuml
+
+class Person {
+- Long id
+- String name
+- LocalDate birthday
+- Team team
+}
+
+class Team {
+- Long id
+- String desc
+}
+
+class Tour {
+- Long id
+- String desc
+- TourState tourstate
+- Team team
+- Boat boat
+- Destination destination
+}
+
+class TourState {
+- Long id
+- String state
+}
+
+class Destination {
+- Long id
+- String desc
+}
+
+class Boat {
+- Long id
+- String name
+- BoatType boatType
+}
+
+class BoatType {
+- Long id
+- String type
+}
+
+Person "*" --> "1" Team
+Team "1" <-- "*" Tour
+TourState "1" -right-> "*" Tour
+Destination "1" -up-> "*" Tour
+Tour "*" -right-> "1" Boat
+Boat "*" -right-> "1" BoatType
+
+@enduml

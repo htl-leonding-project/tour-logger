@@ -19,4 +19,4 @@ WSV Ottensheim, Sektion Rudern (Mag. Martin Kerschner)
 + Palitsch-Infanger Michael
 
 ## Links
-+ Pflichtenheft: 
++ Pflichtenheft: https://htl-leonding-project.github.io/tour-logger/

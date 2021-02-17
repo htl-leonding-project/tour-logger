@@ -4,6 +4,9 @@
 
 === Pflichtenheft
 * Mengengerüst:
+** Überhaupt benötigt?
 ** Wie viele Mitglieder?
 ** Wie viele fahrten ca Jährlich?
 * .gitignore in .idea?
+* github-pages
+** welche files werden benötigt (.keep, themes)

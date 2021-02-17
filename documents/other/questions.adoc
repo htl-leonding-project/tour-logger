@@ -1,3 +1,9 @@
 = Open Questions
 
+== Fragen für 18.02.2021
+
+=== Pflichtenheft
+* Mengengerüst:
+** Wie viele Mitglieder?
+** Wie viele fahrten ca Jährlich?
 * .gitignore in .idea?

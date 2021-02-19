@@ -26,6 +26,8 @@ class TourState {
 - String state
 }
 
+note left: FINISHED\nPLANNED
+
 class Destination {
 - Long id
 - String desc
@@ -36,6 +38,8 @@ class Boat {
 - String name
 - BoatType boatType
 }
+
+note top: Status fehlt\nBOOKED\nDEFECT\nNOT AVAILABLE\nAVAILABLE
 
 class BoatType {
 - Long id

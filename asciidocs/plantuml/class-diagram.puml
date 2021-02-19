@@ -1,0 +1,56 @@
+@startuml
+
+class Person {
+- Long id
+- String name
+- LocalDate birthday
+}
+
+class CrewMember {
+- Long id
+- String desc
+- Tour tour
+- Person person
+}
+
+class Tour {
+- Long id
+- String desc
+- TourState tourstate
+- Boat boat
+- Destination destination
+}
+
+class TourState {
+- Long id
+- String state
+}
+
+note left: FINISHED\nPLANNED
+
+class Destination {
+- Long id
+- String desc
+}
+
+class Boat {
+- Long id
+- String name
+- BoatType boatType
+}
+
+note top: Status fehlt\nBOOKED\nDEFECT\nNOT AVAILABLE\nAVAILABLE
+
+class BoatType {
+- Long id
+- String type
+}
+
+Person "1" <-- "*" CrewMember
+CrewMember "*" --> "1" Tour
+TourState "1" -right-> "*" Tour
+Destination "1" -up-> "*" Tour
+Tour "*" -right-> "1" Boat
+Boat "*" -right-> "1" BoatType
+
+@enduml

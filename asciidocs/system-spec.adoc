@@ -1,0 +1,71 @@
+= Tour Logger - Systemspezifikation
+
+ifndef::imagesdir[:imagesdir: images]
+//:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
+:sourcedir: ../src/main/java
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+endif::backend-html5[]
+
+// print the toc here (not at the default position)
+//toc::[]
+
+== Pflichtenheft "Was mache ich"
+
+
+=== Ausgangssituation
+Der WSV Ottensheim ist ein 1971 gegründeter Wassersportverein mit Schwerpunkt auf Rudern, Kanu und Drachenboot.
+
+=== Istzustand
+Mitglieder des Vereins speichern ihre Bootsausfahrten in einem Fahrtenbuch.
+Derzeit wird das Softwaresystem "efa - elektronisches Fahrtenbuch" eingesetzt.
+
+=== Problemstellung
+Für die derzeitige Fahrtenbuch-Softwarelösung gibt es keinen Support mehr.
+Änderungen sind daher nicht zu implementieren,
+wie zB Änderungen in den Stammdatenstrukturen oder auch Schnittstellen zu anderen Produkten sind nicht möglich,
+wie zB zu einem Smartphone-Client
+
+=== Aufgabenstellung
+Es wird ein Softwaresystem erstellt,
+welches Vereinsmitgliedern erlaubt intuitiv ihre Ausfahrten aufzuzeichnen und zu vergleichen.
+
+==== Funktionale Anforderungen
+* Eintragung von Fahrten
+* Grafisches Reporting der Fahrten
+* Vergleich bzw. Auflistung alles Fahrten
+
+//--
+
+* Quarkus-Backend
+* Frontends
+** Angular
+** iOS
+** Android
+
+* Funktionalität
+** Eintragung von Fahrten
+*** eintragen der Wegpunkte auf open street map, wenn gewünscht
+*** offline eintragen möglich, falls kein Internet Zugang
+** Reporting
+*** Grafische Darstellung von ...
+*** Standardberichte ...
+
+==== Nichtfunktionale Anforderungen (NFA)
+* Robustheit
+* Sicherheit
+* Effizienz
+
+=== Ziele
+* Einfachere Erfassung von Ausfahrtsdaten
+* Motivation der Sportler durch Vergleiche mit anderen.
+* Mobile Eingabe/Änderung und darausfolgende Unabhängigkeit vom Boothaus
+
+
+=== Rahmenbedingungen
+

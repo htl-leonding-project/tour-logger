@@ -1,4 +1,4 @@
-= Tour Logger
+= Vorgaben
 
 ifndef::imagesdir[:imagesdir: images]
 //:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
@@ -15,15 +15,14 @@ endif::backend-html5[]
 // print the toc here (not at the default position)
 //toc::[]
 
-== Pflichtenheft "Was mache ich"
-
-<<system-spec.adoc#, Pflichtenheft>>
-
-== Systementwurf
-
-<<design.adoc#, Systementwurf>>
-
-
-== Vorgaben
-
-<<vorgaben.adoc#, Vorgaben>>
+image:handy-app-logbuch-rudern1.png[]
+image:handy-app-logbuch-rudern2.png[]
+image:image0.jpeg[]
+image:image1.jpeg[]
+image:image2.jpeg[]
+image:image3.jpeg[]
+image:image4.jpeg[]
+image:image7.jpeg[]
+image:image8.jpeg[]
+image:image10.jpeg[]
+image:image10a.jpeg[]

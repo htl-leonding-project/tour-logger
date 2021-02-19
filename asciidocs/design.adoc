@@ -1,4 +1,4 @@
-= Tour Logger
+= Tour Logger - Systemeentwurf
 
 ifndef::imagesdir[:imagesdir: images]
 //:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
@@ -15,15 +15,7 @@ endif::backend-html5[]
 // print the toc here (not at the default position)
 //toc::[]
 
-== Pflichtenheft "Was mache ich"
-
-<<system-spec.adoc#, Pflichtenheft>>
-
-== Systementwurf
-
-<<design.adoc#, Systementwurf>>
-
-
-== Vorgaben
-
-<<vorgaben.adoc#, Vorgaben>>
+[plantuml,cld,png]
+----
+include::plantuml/class-diagramm.puml[]
+----

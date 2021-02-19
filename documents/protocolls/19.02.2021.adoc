@@ -1,0 +1,38 @@
+= Protokoll vom 19.02.2021
+
+== Anwesend
+* Prof. S
+* Prof. P
+* BM
+* FJ
+* HT
+
+== Besprochenes
+* Pflichtenheft
+* Vorgaben
+* Assets und Images Ordner#
+* Issues
+* Milestones
+
+== Abmachungen
+* Pflichtenheft Landing-Page
+* Vorgaben adoc im Projekt
+* protocols zu minutes of meeting (mom) umbenennen
+* Istzustand: Keine Gründe und "System ist nicht ausgereift" wissen wir nicht
+* Problemstellung: Es gibt keinen Support mehr
+* funktionale Anforderungen: Eintragung statt Erstellung, Grafisches Reporting
+* Use-Case-Diagram
+* Tabelle zu jedem Use-Case
+* Systemarchitektur
+* Issues user-story
+* milestones first-use-case zu unspezifisch
+* milestones mit Datum
+* Klassendiagramm im Pflichtenheft
+* macOS im .gitignore
+* Klassendiagramm verfügbare Boote
+* Fragen an Herrn K: Kann ein Boot mehrmals am Tag vermietet werden
+* Klassendiagramme mit Unit-Tests testen
+* Fragen zusammenschreiben
+* kleine Meilensteine
+* Status zu Personen
+* Crew statt Team mit funktionen

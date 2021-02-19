@@ -17,5 +17,5 @@ endif::backend-html5[]
 
 [plantuml,cld,png]
 ----
-include::plantuml/class-diagramm.puml[]
+include::plantuml/class-diagram.puml[]
 ----

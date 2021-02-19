@@ -21,6 +21,8 @@ class Tour {
 - Destination destination
 }
 
+class RouteEntry
+
 class TourState {
 - Long id
 - String state
@@ -28,7 +30,7 @@ class TourState {
 
 note left: FINISHED\nPLANNED
 
-class Destination {
+class Location {
 - Long id
 - String desc
 }
@@ -49,7 +51,8 @@ class BoatType {
 Person "1" <-- "*" CrewMember
 CrewMember "*" --> "1" Tour
 TourState "1" -right-> "*" Tour
-Destination "1" -up-> "*" Tour
+Location "1" <-up- "*" RouteEntry
+RouteEntry "*" -up-> "1" Tour
 Tour "*" -right-> "1" Boat
 Boat "*" -right-> "1" BoatType
 

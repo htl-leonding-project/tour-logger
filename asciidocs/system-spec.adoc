@@ -87,3 +87,9 @@ sportlichen Leistungen konzentrieren können.
 ----
 include::plantuml/class-diagram.puml[]
 ----
+
+=== Systemarchitektur
+[plantuml,sysarch,png]
+----
+include::plantuml/systemarchitektur.puml[]
+----

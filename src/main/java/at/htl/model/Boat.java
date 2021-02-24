@@ -24,9 +24,10 @@ public class Boat {
     public Boat() {
     }
 
-    public Boat(String name, BoatType boatType) {
+    public Boat(String name, BoatType boatType, BoatState boatState) {
         this.name = name;
         this.boatType = boatType;
+        this.boatState = boatState;
     }
 
     public Long getId() {
@@ -53,12 +54,21 @@ public class Boat {
         this.boatType = boatType;
     }
 
+    public BoatState getBoatState() {
+        return boatState;
+    }
+
+    public void setBoatState(BoatState boatState) {
+        this.boatState = boatState;
+    }
+
     @Override
     public String toString() {
         return "Boat{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", boatType=" + boatType +
+                ", boatState=" + boatState +
                 '}';
     }
 }

@@ -17,6 +17,10 @@ public class Boat {
     @JoinColumn(name = "B_BT")
     BoatType boatType;
 
+    @OneToOne
+    @JoinColumn(name = "B_BS")
+    BoatState boatState;
+
     public Boat() {
     }
 

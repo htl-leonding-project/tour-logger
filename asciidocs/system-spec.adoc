@@ -36,13 +36,10 @@ Es wird ein Softwaresystem erstellt,
 welches Vereinsmitgliedern erlaubt intuitiv ihre Ausfahrten aufzuzeichnen und zu vergleichen.
 
 ==== Funktionale Anforderungen
-* Eintragung von Fahrten
-* Grafisches Reporting der Fahrten
-* Vergleich bzw. Auflistung alles Fahrten
 
-//--
 
-* Quarkus-Backend
+* Backend
+** Quarkus
 * Frontends
 ** Angular
 ** iOS
@@ -52,20 +49,29 @@ welches Vereinsmitgliedern erlaubt intuitiv ihre Ausfahrten aufzuzeichnen und zu
 ** Eintragung von Fahrten
 *** eintragen der Wegpunkte auf open street map, wenn gewünscht
 *** offline eintragen möglich, falls kein Internet Zugang
+*** Änderung und Stornierung von geplanten Fahrten
 ** Reporting
-*** Grafische Darstellung von ...
-*** Standardberichte ...
+*** Grafische Darstellung von gefahrenen Kilometern
+*** Auflistung von verschiedenen Ranglisten (nach KM allgemein/pro Boot/pro Zeitraum/...)
+*** Standardberichte von Fahrten bzw. Gruppen von Fahrten
+*** Darstellung von gefahrenen Strecken
+*** Bewertung von Fahrern nach ihrer Leistung
 
 ==== Nichtfunktionale Anforderungen (NFA)
 * Robustheit
+** Es sollen Fehler verhindert werden (z.B. keine Doppelten Eintragungen)
 * Sicherheit
+** Persönliche Daten dürfen nicht von Außenstehenden eingesehen werden
 * Effizienz
+** Die Fahrer sollen nicht viel Zeit damit verbringen ihre Fahrten einzutragen, sondern sich auf ihre
+sportlichen Leistungen konzentrieren können.
+* Benutzertauglichkeit
+** Der User soll durch ein intuitives Interface schnell und einfach verstehen wie er seine Buchungen durchführen kann.
+* Zuverlässigkeit
+** Um den Vereinsbetrieb immer flüssig am laufen zu halten, muss unsere Anwendung immer nach Plan funktionieren
+
 
 === Ziele
 * Einfachere Erfassung von Ausfahrtsdaten
 * Motivation der Sportler durch Vergleiche mit anderen.
 * Mobile Eingabe/Änderung und darausfolgende Unabhängigkeit vom Boothaus
-
-
-=== Rahmenbedingungen
-

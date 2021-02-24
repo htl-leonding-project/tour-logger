@@ -4,6 +4,7 @@ class Person {
 - Long id
 - String name
 - LocalDate birthday
+- String state
 }
 
 class CrewMember {
@@ -16,12 +17,16 @@ class CrewMember {
 class Tour {
 - Long id
 - String desc
-- TourState tourstate
+- TourState tourState
 - Boat boat
-- Destination destination
+- RouteEntry routeEntry
 }
 
-class RouteEntry
+class RouteEntry{
+- Long id
+- Location location
+- Tour tour
+}
 
 class TourState {
 - Long id
@@ -33,20 +38,29 @@ note left: FINISHED\nPLANNED
 class Location {
 - Long id
 - String desc
+- float longitude
+- float latitude
 }
 
 class Boat {
 - Long id
 - String name
 - BoatType boatType
+- BoatState boatState
 }
 
-note top: Status fehlt\nBOOKED\nDEFECT\nNOT AVAILABLE\nAVAILABLE
+class BoatState {
+- Long id
+- String state
+}
+
+note top: BOOKED\nDEFECT\nNOT AVAILABLE\nAVAILABLE
 
 class BoatType {
 - Long id
 - String type
 }
+note right: KANU\nRUDERBOOT\nDRACHENBOOT
 
 Person "1" <-- "*" CrewMember
 CrewMember "*" --> "1" Tour
@@ -55,5 +69,6 @@ Location "1" <-up- "*" RouteEntry
 RouteEntry "*" -up-> "1" Tour
 Tour "*" -right-> "1" Boat
 Boat "*" -right-> "1" BoatType
+Boat "1" -up-> "1" BoatState
 
 @enduml

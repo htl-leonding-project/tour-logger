@@ -36,8 +36,6 @@ Es wird ein Softwaresystem erstellt,
 welches Vereinsmitgliedern erlaubt intuitiv ihre Ausfahrten aufzuzeichnen und zu vergleichen.
 
 ==== Funktionale Anforderungen
-
-
 * Backend
 ** Quarkus
 * Frontends
@@ -57,6 +55,13 @@ welches Vereinsmitgliedern erlaubt intuitiv ihre Ausfahrten aufzuzeichnen und zu
 *** Darstellung von gefahrenen Strecken
 *** Bewertung von Fahrern nach ihrer Leistung
 
+==== Use-Case-Diagramm
+
+[plantuml,use-case,png]
+----
+include::plantuml/use-case-diagram.puml[]
+----
+
 ==== Nichtfunktionale Anforderungen (NFA)
 * Robustheit
 ** Es sollen Fehler verhindert werden (z.B. keine Doppelten Eintragungen)
@@ -75,3 +80,16 @@ sportlichen Leistungen konzentrieren können.
 * Einfachere Erfassung von Ausfahrtsdaten
 * Motivation der Sportler durch Vergleiche mit anderen.
 * Mobile Eingabe/Änderung und darausfolgende Unabhängigkeit vom Boothaus
+
+
+=== Systementwurf
+[plantuml,cld,png]
+----
+include::plantuml/class-diagram.puml[]
+----
+
+=== Systemarchitektur
+[plantuml,sysarch,png]
+----
+include::plantuml/systemarchitektur.puml[]
+----

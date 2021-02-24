@@ -36,8 +36,6 @@ Es wird ein Softwaresystem erstellt,
 welches Vereinsmitgliedern erlaubt intuitiv ihre Ausfahrten aufzuzeichnen und zu vergleichen.
 
 ==== Funktionale Anforderungen
-
-
 * Backend
 ** Quarkus
 * Frontends
@@ -56,6 +54,13 @@ welches Vereinsmitgliedern erlaubt intuitiv ihre Ausfahrten aufzuzeichnen und zu
 *** Standardberichte von Fahrten bzw. Gruppen von Fahrten
 *** Darstellung von gefahrenen Strecken
 *** Bewertung von Fahrern nach ihrer Leistung
+
+==== Use-Case-Diagramm
+
+[plantuml,cld,png]
+----
+include::plantuml/use-case-diagram.puml[]
+----
 
 ==== Nichtfunktionale Anforderungen (NFA)
 * Robustheit

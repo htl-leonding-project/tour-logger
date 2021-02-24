@@ -1,0 +1,27 @@
+@startuml
+package Tourlogger {
+package Eintragung {
+(Eintragung von Fahrten) as a
+(Eintragen der Wegpunkte auf der Karte) as b
+(Offline-Eintragung) as c
+(Änderung und Stornierung von Fahren) as d
+}
+
+package Reporting {
+(Grafische Darstellung der gefahrenen Kilometer) as e
+(Auflistung nach Ranglisten) as f
+(Darstellung der Strecken) as g
+(Bewertung der Fahrer) as h
+}
+}
+
+left to right direction
+:user: --> a
+:user: --> b
+:user: --> c
+:user: --> d
+:user: --> e
+:user: --> f
+:user: --> g
+:user: --> h
+@enduml

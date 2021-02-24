@@ -19,7 +19,7 @@ class Tour {
 - String desc
 - TourState tourState
 - Boat boat
-- Destination destination
+- RouteEntry routeEntry
 }
 
 class RouteEntry{

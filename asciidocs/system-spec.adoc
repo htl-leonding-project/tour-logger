@@ -57,7 +57,7 @@ welches Vereinsmitgliedern erlaubt intuitiv ihre Ausfahrten aufzuzeichnen und zu
 
 ==== Use-Case-Diagramm
 
-[plantuml,cld,png]
+[plantuml,use-case,png]
 ----
 include::plantuml/use-case-diagram.puml[]
 ----
@@ -80,3 +80,10 @@ sportlichen Leistungen konzentrieren können.
 * Einfachere Erfassung von Ausfahrtsdaten
 * Motivation der Sportler durch Vergleiche mit anderen.
 * Mobile Eingabe/Änderung und darausfolgende Unabhängigkeit vom Boothaus
+
+
+=== Systementwurf
+[plantuml,cld,png]
+----
+include::plantuml/class-diagram.puml[]
+----

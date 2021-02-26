@@ -1,4 +1,4 @@
-package java.at.htl.model;
+package at.htl.model;
 
 import javax.persistence.*;
 
@@ -20,7 +20,7 @@ public class Tour {
     @JoinColumn(name = "T_B")
     Boat boat;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "T_RE")
     RouteEntry routeEntry;
 

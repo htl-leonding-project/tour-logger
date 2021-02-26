@@ -1,4 +1,4 @@
-package java.at.htl.model;
+package at.htl.model;
 
 import javax.persistence.*;
 

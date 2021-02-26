@@ -3,3 +3,5 @@
 == Fragen für 18.02.2021
 
 * Was sind Dimensionen für Milestones?
+* State in Person?
+* EXCEPTION IN TEST (entitymanager)

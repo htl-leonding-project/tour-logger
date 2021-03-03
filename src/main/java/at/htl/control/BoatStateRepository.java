@@ -11,6 +11,9 @@ public class BoatStateRepository {
     @Inject
     EntityManager em;
 
-
+    @Transactional
+    public void delete(BoatState boatState) {
+        em.remove(boatState);
+    }
 
 }

@@ -16,4 +16,9 @@ public class BoatRepository {
         em.remove(boat);
     }
 
+    @Transactional
+    public void save(Boat boat){
+        em.merge(boat);
+    }
+
 }

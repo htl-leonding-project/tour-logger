@@ -26,7 +26,7 @@ class BoatTypeTest {
     UserTransaction tm;
 
     @Test
-    void createPersonTest() throws SystemException, NotSupportedException, HeuristicRollbackException, HeuristicMixedException, RollbackException {
+    void createBoatTypeTest() throws SystemException, NotSupportedException, HeuristicRollbackException, HeuristicMixedException, RollbackException {
         BoatType bt = new BoatType("Kanu");
         tm.begin();
         em.persist(bt);

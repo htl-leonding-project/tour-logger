@@ -2,7 +2,7 @@ package at.htl.modelTest;
 
 import at.htl.misc.DataSource;
 import at.htl.model.BoatState;
-import at.htl.model.BoatType;
+import at.htl.model.Location;
 import io.quarkus.test.junit.QuarkusTest;
 import org.assertj.db.type.Table;
 import org.junit.jupiter.api.Test;
@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @QuarkusTest
 @ApplicationScoped
-class BoatStateTest {
+class LocationTest {
 
     @Inject
     EntityManager em;
@@ -25,14 +25,16 @@ class BoatStateTest {
     UserTransaction tm;
 
     @Test
-    void createBoatStateTest() throws SystemException, NotSupportedException, HeuristicRollbackException, HeuristicMixedException, RollbackException {
-        BoatState bs = new BoatState("AVAILABLE");
+    void createLocationTest() throws SystemException, NotSupportedException, HeuristicRollbackException, HeuristicMixedException, RollbackException {
+        Location l = new Location("Donau", 14.285830f, 48.306938f);
         tm.begin();
-        em.persist(bs);
+        em.persist(l);
         tm.commit();
-        Table boatState = new Table(DataSource.getDataSource(), "BOAT_STATE");
-        assertThat(boatState).row(0)
+        Table location = new Table(DataSource.getDataSource(), "LOCATION");
+        assertThat(location).row(0)
                 .value().isEqualTo(1)
-                .value().isEqualTo("AVAILABLE");
+                .value().isEqualTo("Donau")
+                .value().isEqualTo(48.306938f)
+                .value().isEqualTo(14.285830f);
     }
 }

@@ -1,0 +1,16 @@
+package at.htl.control;
+
+import at.htl.model.BoatState;
+
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+
+public class BoatStateRepository {
+
+    @Inject
+    EntityManager em;
+
+
+
+}

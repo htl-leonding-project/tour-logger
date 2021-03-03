@@ -6,6 +6,7 @@ import at.htl.model.TourState;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
+import java.util.List;
 
 public class TourStateRepository {
 
@@ -22,6 +23,10 @@ public class TourStateRepository {
         em.merge(tourState);
     }
 
-
+    public List<TourState> findAll() {
+        return em
+                .createNamedQuery("TourState.findAll", TourState.class)
+                .getResultList();
+    }
 
 }

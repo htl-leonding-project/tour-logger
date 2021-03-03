@@ -27,14 +27,14 @@ class BoatTypeTest {
 
     @Test
     void createBoatTypeTest() throws SystemException, NotSupportedException, HeuristicRollbackException, HeuristicMixedException, RollbackException {
-        BoatType bt = new BoatType("Kanu");
+        BoatType bt = new BoatType("KANU");
         tm.begin();
         em.persist(bt);
         tm.commit();
         Table boatType = new Table(DataSource.getDataSource(), "BOAT_TYPE");
         assertThat(boatType).row(0)
                 .value().isEqualTo(1)
-                .value().isEqualTo("Kanu");
+                .value().isEqualTo("KANU");
     }
 
 }

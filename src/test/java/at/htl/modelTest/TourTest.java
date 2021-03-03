@@ -1,9 +1,7 @@
 package at.htl.modelTest;
 
 import at.htl.misc.DataSource;
-import at.htl.model.Boat;
-import at.htl.model.BoatState;
-import at.htl.model.BoatType;
+import at.htl.model.*;
 import io.quarkus.test.junit.QuarkusTest;
 import org.assertj.db.type.Table;
 import org.junit.jupiter.api.Test;
@@ -18,28 +16,40 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @QuarkusTest
 @ApplicationScoped
-class BoatTest {
+class TourTest {
+
 
     @Inject
     EntityManager em;
     @Inject
     UserTransaction tm;
 
+
     @Test
-    void createBoatTest() throws SystemException, NotSupportedException, HeuristicRollbackException, HeuristicMixedException, RollbackException {
+    void createTourStateTest() throws SystemException, NotSupportedException, HeuristicRollbackException, HeuristicMixedException, RollbackException {
+        TourState ts = new TourState("PLANNED");
         BoatState bs = new BoatState("AVAILABLE");
         BoatType bt = new BoatType("KANU");
+        Boat b = new Boat("Test", bt, bs);
+        Location l = new Location("Donau", 14.285830f, 48.306938f);
+        Tour t = new Tour();
+        RouteEntry re = new RouteEntry(l, t);
         tm.begin();
+        em.persist(ts);
         em.persist(bs);
         em.persist(bt);
-        em.persist(new Boat("Test", bt, bs));
+        em.persist(b);
+        em.persist(l);
+        em.persist(t);
+        em.persist(re);
+        em.persist(new Tour("TEST", ts, b, re));
         tm.commit();
-        Table boat = new Table(DataSource.getDataSource(), "BOAT");
-        assertThat(boat).row(0)
+        Table tour = new Table(DataSource.getDataSource(), "TOUR");
+        assertThat(tour).row(1)
+                .value().isEqualTo(2)
+                .value().isEqualTo("TEST")
                 .value().isEqualTo(1)
-                .value().isEqualTo("Test")
                 .value().isEqualTo(1)
                 .value().isEqualTo(1);
     }
-
 }

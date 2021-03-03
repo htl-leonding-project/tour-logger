@@ -17,4 +17,9 @@ public class TourRepository {
         em.remove(tour);
     }
 
+    @Transactional
+    public void save(Tour tour){
+        em.merge(tour);
+    }
+
 }

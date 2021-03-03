@@ -11,22 +11,23 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.transaction.*;
 
+import java.time.LocalDate;
+import java.time.Month;
+
 import static org.assertj.db.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 @QuarkusTest
 @ApplicationScoped
-class TourTest {
-
+class CrewMemberTest {
 
     @Inject
     EntityManager em;
     @Inject
     UserTransaction tm;
 
-
     @Test
-    void createTourTest() throws SystemException, NotSupportedException, HeuristicRollbackException, HeuristicMixedException, RollbackException {
+    void createCrewMemberTest() throws SystemException, NotSupportedException, HeuristicRollbackException, HeuristicMixedException, RollbackException {
         TourState ts = new TourState("PLANNED");
         BoatState bs = new BoatState("AVAILABLE");
         BoatType bt = new BoatType("KANU");
@@ -34,6 +35,8 @@ class TourTest {
         Location l = new Location("Donau", 14.285830f, 48.306938f);
         Tour t = new Tour();
         RouteEntry re = new RouteEntry(l, t);
+        Tour t2 = new Tour("TEST", ts, b, re);
+        Person p = new Person("Günther", LocalDate.of(1999, Month.APRIL, 25), "test");
         tm.begin();
         em.persist(ts);
         em.persist(bs);
@@ -42,13 +45,14 @@ class TourTest {
         em.persist(l);
         em.persist(t);
         em.persist(re);
-        em.persist(new Tour("TEST", ts, b, re));
+        em.persist(t2);
+        em.persist(p);
+        em.persist(new CrewMember("TEST", t, p));
         tm.commit();
-        Table tour = new Table(DataSource.getDataSource(), "TOUR");
-        assertThat(tour).row(1)
-                .value().isEqualTo(2)
-                .value().isEqualTo("TEST")
+        Table crewMember = new Table(DataSource.getDataSource(), "CREW_MEMBER");
+        assertThat(crewMember).row(0)
                 .value().isEqualTo(1)
+                .value().isEqualTo("TEST")
                 .value().isEqualTo(1)
                 .value().isEqualTo(1);
     }

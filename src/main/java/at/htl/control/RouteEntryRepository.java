@@ -17,4 +17,9 @@ public class RouteEntryRepository {
         em.remove(routeEntry);
     }
 
+    @Transactional
+    public void save(RouteEntry routeEntry){
+        em.merge(routeEntry);
+    }
+
 }

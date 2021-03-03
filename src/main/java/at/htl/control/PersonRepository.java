@@ -17,6 +17,9 @@ public class PersonRepository {
         em.remove(person);
     }
 
-
+    @Transactional
+    public void save(Person person){
+        em.merge(person);
+    }
 
 }

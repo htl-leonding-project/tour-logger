@@ -17,6 +17,11 @@ public class TourStateRepository {
         em.remove(tourState);
     }
 
+    @Transactional
+    public void save(TourState tourState){
+        em.merge(tourState);
+    }
+
 
 
 }

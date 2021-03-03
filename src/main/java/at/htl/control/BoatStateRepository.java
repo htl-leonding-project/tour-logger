@@ -23,7 +23,7 @@ public class BoatStateRepository {
         em.merge(boatState);
     }
 
-    public List<Boat> findAll() {
+    public List<BoatState> findAll() {
         return em
                 .createNamedQuery("Boat_State.findAll", BoatState.class)
                 .getResultList();

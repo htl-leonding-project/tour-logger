@@ -6,6 +6,7 @@ import at.htl.model.Tour;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
+import java.util.List;
 
 public class TourRepository {
 
@@ -20,6 +21,12 @@ public class TourRepository {
     @Transactional
     public void save(Tour tour){
         em.merge(tour);
+    }
+
+    public List<Tour> findAll() {
+        return em
+                .createNamedQuery("Tour.findAll", Tour.class)
+                .getResultList();
     }
 
 }

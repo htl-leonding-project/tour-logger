@@ -6,6 +6,7 @@ import at.htl.model.Location;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
+import java.util.List;
 
 public class LocationRepository {
 
@@ -20,6 +21,12 @@ public class LocationRepository {
     @Transactional
     public void save(Location location){
         em.merge(location);
+    }
+
+    public List<Location> findAll() {
+        return em
+                .createNamedQuery("Location.findAll", Location.class)
+                .getResultList();
     }
 
 }

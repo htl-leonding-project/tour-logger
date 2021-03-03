@@ -13,7 +13,6 @@ import javax.persistence.EntityManager;
 import javax.transaction.*;
 
 import static org.assertj.db.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @QuarkusTest
 @ApplicationScoped

@@ -14,7 +14,6 @@ import java.time.LocalDate;
 import java.time.Month;
 
 import static org.assertj.db.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @QuarkusTest
 @ApplicationScoped

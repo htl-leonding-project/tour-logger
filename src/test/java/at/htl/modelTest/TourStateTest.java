@@ -1,7 +1,7 @@
 package at.htl.modelTest;
 
 import at.htl.misc.DataSource;
-import at.htl.model.BoatState;
+import at.htl.model.TourState;
 import io.quarkus.test.junit.QuarkusTest;
 import org.assertj.db.type.Table;
 import org.junit.jupiter.api.Test;
@@ -13,24 +13,26 @@ import javax.transaction.*;
 
 import static org.assertj.db.api.Assertions.assertThat;
 
+
 @QuarkusTest
 @ApplicationScoped
-class BoatStateTest {
+class TourStateTest {
 
     @Inject
     EntityManager em;
     @Inject
     UserTransaction tm;
 
+
     @Test
-    void createBoatStateTest() throws SystemException, NotSupportedException, HeuristicRollbackException, HeuristicMixedException, RollbackException {
-        BoatState bs = new BoatState("AVAILABLE");
+    void createTourStateTest() throws SystemException, NotSupportedException, HeuristicRollbackException, HeuristicMixedException, RollbackException {
+        TourState ts = new TourState("PLANNED");
         tm.begin();
-        em.persist(bs);
+        em.persist(ts);
         tm.commit();
-        Table boatState = new Table(DataSource.getDataSource(), "BOAT_STATE");
-        assertThat(boatState).row(0)
+        Table tourState = new Table(DataSource.getDataSource(), "TOUR_STATE");
+        assertThat(tourState).row(0)
                 .value().isEqualTo(1)
-                .value().isEqualTo("AVAILABLE");
+                .value().isEqualTo("PLANNED");
     }
 }

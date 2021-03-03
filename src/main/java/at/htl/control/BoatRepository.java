@@ -5,6 +5,7 @@ import at.htl.model.Boat;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
+import java.util.List;
 
 public class BoatRepository {
 
@@ -19,6 +20,12 @@ public class BoatRepository {
     @Transactional
     public void save(Boat boat){
         em.merge(boat);
+    }
+
+    public List<Boat> findAll() {
+        return em
+                .createNamedQuery("Boat.findAll", Boat.class)
+                .getResultList();
     }
 
 }

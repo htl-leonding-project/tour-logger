@@ -17,4 +17,9 @@ public class LocationRepository {
         em.remove(location);
     }
 
+    @Transactional
+    public void save(Location location){
+        em.merge(location);
+    }
+
 }

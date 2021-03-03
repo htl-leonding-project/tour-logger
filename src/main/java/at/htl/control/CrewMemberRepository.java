@@ -17,4 +17,9 @@ public class CrewMemberRepository {
         em.remove(crewMember);
     }
 
+    @Transactional
+    public void save(CrewMember crewMember){
+        em.merge(crewMember);
+    }
+
 }

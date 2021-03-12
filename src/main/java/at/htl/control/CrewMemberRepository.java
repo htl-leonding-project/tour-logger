@@ -5,7 +5,6 @@ import at.htl.model.CrewMember;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.transaction.Transactional;
 import java.util.List;
 
 public class CrewMemberRepository {
@@ -13,12 +12,10 @@ public class CrewMemberRepository {
     @Inject
     EntityManager em;
 
-    @Transactional
     public void delete(CrewMember crewMember) {
         em.remove(crewMember);
     }
 
-    @Transactional
     public void save(CrewMember crewMember){
         em.merge(crewMember);
     }

@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "ROUTE_ENTRY")
+@NamedQuery(name = "RouteEntry.findAll", query = "select re from RouteEntry re")
 public class RouteEntry {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

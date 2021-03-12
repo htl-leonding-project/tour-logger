@@ -5,6 +5,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "PERSON")
+@NamedQuery(name = "Person.findAll", query = "select p from Person p")
 public class Person {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

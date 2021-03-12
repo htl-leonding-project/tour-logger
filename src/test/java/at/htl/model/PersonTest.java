@@ -1,7 +1,6 @@
-package at.htl.modelTest;
+package at.htl.model;
 
 import at.htl.misc.DataSource;
-import at.htl.model.Person;
 import io.quarkus.test.junit.QuarkusTest;
 import org.assertj.db.type.Table;
 import org.junit.jupiter.api.Test;

@@ -3,10 +3,12 @@ package at.htl.control;
 import at.htl.model.RouteEntry;
 import at.htl.model.Tour;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import java.util.List;
 
+@ApplicationScoped
 public class TourRepository {
 
     @Inject

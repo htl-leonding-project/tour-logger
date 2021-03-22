@@ -4,10 +4,12 @@ import at.htl.model.BoatState;
 import at.htl.model.RouteEntry;
 import io.vertx.ext.web.Route;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import java.util.List;
 
+@ApplicationScoped
 public class RouteEntryRepository {
 
     @Inject

@@ -3,10 +3,12 @@ package at.htl.control;
 import at.htl.model.Location;
 import at.htl.model.Person;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import java.util.List;
 
+@ApplicationScoped
 public class PersonRepository {
 
     @Inject

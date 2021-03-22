@@ -2,10 +2,12 @@ package at.htl.control;
 
 import at.htl.model.Boat;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import java.util.List;
 
+@ApplicationScoped
 public class BoatRepository {
 
     @Inject

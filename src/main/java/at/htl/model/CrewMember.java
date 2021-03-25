@@ -15,11 +15,11 @@ public class CrewMember {
     String desc;
 
     @ManyToOne
-    @JoinColumn(name = "CM_T")
+    @JoinColumn(name = "CM_TOUR")
     Tour tour;
 
     @ManyToOne
-    @JoinColumn(name = "CM_P")
+    @JoinColumn(name = "CM_PERSON")
     Person person;
 
     public CrewMember() {

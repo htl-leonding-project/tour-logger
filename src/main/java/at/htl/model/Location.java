@@ -14,10 +14,10 @@ public class Location {
     @Column(name = "L_DESC")
     String desc;
 
-    @Column(name = "L_LONG")
+    @Column(name = "L_LONGITUDE")
     float longitude;
 
-    @Column(name = "L_LAT")
+    @Column(name = "L_LATITUDE")
     float latitude;
 
     public Location() {

@@ -12,8 +12,11 @@ public class Person {
     @Column(name = "P_ID")
     Long id;
 
-    @Column(name = "P_NAME")
-    String name;
+    @Column(name = "P_FIRSTNAME")
+    String firstName;
+
+    @Column(name = "P_LASTNAME")
+    String lastName;
 
     @Column(name = "P_BDAY")
     LocalDate birthday;
@@ -24,8 +27,9 @@ public class Person {
     public Person() {
     }
 
-    public Person(String name, LocalDate birthday, String state) {
-        this.name = name;
+    public Person(String firstName, String lastName, LocalDate birthday, String state) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.birthday = birthday;
         this.state = state;
     }
@@ -38,12 +42,20 @@ public class Person {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public LocalDate getBirthday() {
@@ -66,7 +78,8 @@ public class Person {
     public String toString() {
         return "Person{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", birthday=" + birthday +
                 ", state='" + state + '\'' +
                 '}';

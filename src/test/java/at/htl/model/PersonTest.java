@@ -26,7 +26,7 @@ class PersonTest {
 
     @Test
     void createPersonTest() throws SystemException, NotSupportedException, HeuristicRollbackException, HeuristicMixedException, RollbackException {
-        Person p = new Person("Max", "Mustermann", LocalDate.of(1999, Month.APRIL, 25), "test");
+        Person p = new Person("Max", "Mustermann", LocalDate.of(1999, Month.APRIL, 25));
         tm.begin();
         em.persist(p);
         tm.commit();
@@ -35,8 +35,7 @@ class PersonTest {
                 .value().isEqualTo(1)
                 .value().isEqualTo(LocalDate.of(1999, Month.APRIL, 25))
                 .value().isEqualTo("Max")
-                .value().isEqualTo("Mustermann")
-                .value().isEqualTo("test");
+                .value().isEqualTo("Mustermann");
     }
 
 }

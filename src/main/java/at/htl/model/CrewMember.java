@@ -11,8 +11,8 @@ public class CrewMember {
     @Column(name = "CM_ID")
     Long id;
 
-    @Column(name = "CM_DESC")
-    String desc;
+    @Column(name = "CM_ROLE")
+    String role;
 
     @ManyToOne
     @JoinColumn(name = "CM_TOUR")
@@ -25,8 +25,8 @@ public class CrewMember {
     public CrewMember() {
     }
 
-    public CrewMember(String desc, Tour tour, Person person) {
-        this.desc = desc;
+    public CrewMember(String role, Tour tour, Person person) {
+        this.role = role;
         this.tour = tour;
         this.person = person;
     }
@@ -39,12 +39,12 @@ public class CrewMember {
         this.id = id;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getRole() {
+        return role;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public Tour getTour() {
@@ -67,7 +67,7 @@ public class CrewMember {
     public String toString() {
         return "CrewMember{" +
                 "id=" + id +
-                ", desc='" + desc + '\'' +
+                ", role='" + role + '\'' +
                 ", tour=" + tour +
                 ", person=" + person +
                 '}';

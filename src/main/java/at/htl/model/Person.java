@@ -21,17 +21,14 @@ public class Person {
     @Column(name = "P_BDAY")
     LocalDate birthday;
 
-    @Column(name = "P_STATE")
-    String state;
 
     public Person() {
     }
 
-    public Person(String firstName, String lastName, LocalDate birthday, String state) {
+    public Person(String firstName, String lastName, LocalDate birthday) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthday = birthday;
-        this.state = state;
     }
 
     public Long getId() {
@@ -66,14 +63,6 @@ public class Person {
         this.birthday = birthday;
     }
 
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
     @Override
     public String toString() {
         return "Person{" +
@@ -81,7 +70,6 @@ public class Person {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", birthday=" + birthday +
-                ", state='" + state + '\'' +
                 '}';
     }
 }

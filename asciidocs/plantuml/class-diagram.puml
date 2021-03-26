@@ -2,14 +2,14 @@
 
 class Person {
 - Long id
-- String name
+- String firstName
+- String lastName
 - LocalDate birthday
-- String state
 }
 
 class CrewMember {
 - Long id
-- String desc
+- String role
 - Tour tour
 - Person person
 }
@@ -33,7 +33,7 @@ class TourState {
 - String state
 }
 
-note left: FINISHED\nPLANNED
+note left: FINISHED\nPLANNED\nCANCELLED
 
 class Location {
 - Long id
@@ -60,7 +60,7 @@ class BoatType {
 - Long id
 - String type
 }
-note right: KANU\nRUDERBOOT\nDRACHENBOOT
+note right: ZWEIER\nDREIER\nVIERER\nFÜNFER\nACHTER\nANDERE
 
 Person "1" <-- "*" CrewMember
 CrewMember "*" --> "1" Tour

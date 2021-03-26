@@ -67,10 +67,28 @@ public class InitBean {
         tourStateRepository.save(tourState3);
     }
 
+    void insertData() {
+        BoatType boatType = new BoatType("FÜNFER");
+        BoatState boatState = new BoatState("AVAILABLE");
+        TourState tourState = new TourState("FINISHED");
 
+        Boat boat = new Boat("Rapunzel", boatType, boatState);
+        Location location = new Location("Altarm", 48.326504f, 14.163444f);
+        RouteEntry routeEntry = new RouteEntry(location, null);
+        Tour tour = new Tour("AUSFAHRT", tourState, boat, routeEntry);
+        Person person = new Person("Martin", "Kerschner", LocalDate.of(2021, 3, 26));
+        CrewMember crewMember = new CrewMember("COX", tour, person);
+
+        boatRepository.save(boat);
+        locationRepository.save(location);
+        routeEntryRepository.save(routeEntry);
+        tourRepository.save(tour);
+        personRepository.save(person);
+        crewMemberRepository.save(crewMember);
+    }
 
     void onStart(@Observes StartupEvent ev) {
         insertEnums();
-
+        insertData();
     }
 }

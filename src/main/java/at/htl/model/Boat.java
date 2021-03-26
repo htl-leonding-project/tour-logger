@@ -14,11 +14,11 @@ public class Boat {
     String name;
 
     @ManyToOne
-    @JoinColumn(name = "B_BT")
+    @JoinColumn(name = "B_BTYPE")
     BoatType boatType;
 
     @OneToOne
-    @JoinColumn(name = "B_BS")
+    @JoinColumn(name = "B_BSTATE")
     BoatState boatState;
 
     public Boat() {

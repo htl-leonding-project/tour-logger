@@ -34,7 +34,7 @@ class CrewMemberTest {
         Tour t = new Tour();
         RouteEntry re = new RouteEntry(l, t);
         Tour t2 = new Tour("TEST", ts, b, re);
-        Person p = new Person("Günther", LocalDate.of(1999, Month.APRIL, 25), "test");
+        Person p = new Person("Max", "Mustermann", LocalDate.of(1999, Month.APRIL, 25), "test");
         tm.begin();
         em.persist(ts);
         em.persist(bs);

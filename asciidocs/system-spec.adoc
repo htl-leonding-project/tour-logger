@@ -24,6 +24,7 @@ Der WSV Ottensheim ist ein 1971 gegründeter Wassersportverein mit Schwerpunkt a
 === Istzustand
 Mitglieder des Vereins speichern ihre Bootsausfahrten in einem Fahrtenbuch.
 Derzeit wird das Softwaresystem "efa - elektronisches Fahrtenbuch" eingesetzt.
+https://htl-leonding-project.github.io/tour-logger/vorgaben.html
 
 === Problemstellung
 Für die derzeitige Fahrtenbuch-Softwarelösung gibt es keinen Support mehr.

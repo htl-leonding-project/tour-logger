@@ -21,6 +21,11 @@ public class BoatState {
         this.state = state;
     }
 
+    public BoatState(Long id, String state) {
+        this.id = id;
+        this.state = state;
+    }
+
     public Long getId() {
         return id;
     }

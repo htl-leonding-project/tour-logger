@@ -19,4 +19,6 @@ WSV Ottensheim, Sektion Rudern (Mag. Martin Kerschner)
 + Palitsch-Infanger Michael
 
 ## Links
-+ Pflichtenheft: https://htl-leonding-project.github.io/tour-logger/
+- Pflichtenheft: https://htl-leonding-project.github.io/tour-logger/
+- [efa - elektronisches Fahrtenbuch für Rudern und Kanu](http://efa.nmichael.de/efa.html.de)
+- [efa - github-repo](https://github.com/nicmichael/efa)

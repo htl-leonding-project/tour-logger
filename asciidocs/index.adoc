@@ -6,14 +6,9 @@ ifndef::imagesdir[:imagesdir: images]
 :icons: font
 :sectnums:    // Nummerierung der Überschriften / section numbering
 :toc: left
+:icons: font
+:experimental:
 
-//Need this blank line after ifdef, don't know why...
-ifdef::backend-html5[]
-
-endif::backend-html5[]
-
-// print the toc here (not at the default position)
-//toc::[]
 
 == Pflichtenheft "Was mache ich"
 

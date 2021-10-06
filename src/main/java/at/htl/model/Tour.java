@@ -1,15 +1,15 @@
 package at.htl.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "TOUR")
 public class Tour {
 
-    @Id @Column(name = "T_ID")
+    @Id @Column(name = "T_ID") @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
     @Column(name = "T_FIRST_NAME")
     String firstName;

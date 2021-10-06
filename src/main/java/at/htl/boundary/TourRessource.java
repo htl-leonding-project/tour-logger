@@ -47,4 +47,27 @@ public class TourRessource {
                 .build();
     }
 
+    @GET
+    @Path("/findAll")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Tour> findAll(){
+        return tr.listAll();
+    }
+
+    @DELETE
+    @Transactional
+    @Path("/deletebyid/{id}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response deleteById(@PathParam("id") long id) {
+        try{
+            tr.deleteById(id);
+            return Response.noContent().build();
+        } catch (IllegalArgumentException e){
+            return Response.status(400).header("Reason", "Tour mit id " + id + " existiert nicht").build();
+        }
+
+    }
+
+
 }

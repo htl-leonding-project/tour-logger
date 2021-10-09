@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import {DataService} from '../data.service'
 import { PeriodicElement} from "../data.service";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-fahrten-form',
@@ -16,6 +17,16 @@ export class FahrtenFormComponent implements OnInit {
   kmAnzahl: any;
   fullName: any;
 
+  /*validator: any;
+  validator = this.formBuilder.group({
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
+    bootbez: ['', Validators.required],
+    ort: ['', Validators.required],
+    kmAnzahl: ['', Validators.required],
+  });*/
+
+
   constructor(public dataServ:DataService) { };
 
   addEntry() {
@@ -23,12 +34,17 @@ export class FahrtenFormComponent implements OnInit {
     this.dataServ.setElem(this.fullName, this.bootbez, this.ort, this.kmAnzahl);
 
     this.firstName = '';
+    this.lastName = '';
     this.bootbez = '';
     this.ort = '';
     this.kmAnzahl = '';
   }
 
+
+
   ngOnInit(): void {
   }
 
 }
+
+

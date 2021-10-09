@@ -122,7 +122,7 @@ table {
     border-collapse: collapse;
     background: white;
     border-radius: 0px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     width: 100%;
     margin: 0 auto;
     position: relative;
@@ -290,4 +290,8 @@ tbody tr:hover {
         padding-left: 15px;
         padding-right: 15px;
     }
+}
+
+button {
+    margin-top: 10%;
 }

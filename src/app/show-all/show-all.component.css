@@ -1,4 +1,8 @@
-
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
@@ -8,10 +12,6 @@
     font-family: OpenSans-Regular;
 }
 
-
-
-/*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
 * {
     margin: 0px;
     padding: 0px;
@@ -68,15 +68,7 @@ textarea:focus, input:focus {
 }
 
 /* ------------------------------------ */
-button {
-    outline: none !important;
-    border: none;
-    background: transparent;
-}
 
-button:hover {
-    cursor: pointer;
-}
 
 iframe {
     border: none !important;
@@ -129,7 +121,7 @@ table {
     border-spacing: 1;
     border-collapse: collapse;
     background: white;
-    border-radius: 10px;
+    border-radius: 0px;
     overflow: hidden;
     width: 100%;
     margin: 0 auto;
@@ -144,6 +136,7 @@ table td, table th {
 table thead tr {
     height: 60px;
     background: #36304a;
+    color: white;
 }
 table tbody tr {
     height: 50px;

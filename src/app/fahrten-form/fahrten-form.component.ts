@@ -9,17 +9,20 @@ import { PeriodicElement} from "../data.service";
   styleUrls: ['./fahrten-form.component.css']
 })
 export class FahrtenFormComponent implements OnInit {
-  name: any;
+  firstName: any;
+  lastName: any;
   bootbez: any;
   ort: any;
   kmAnzahl: any;
+  fullName: any;
 
   constructor(public dataServ:DataService) { };
 
   addEntry() {
-    this.dataServ.setElem(this.name, this.bootbez, this.ort, this.kmAnzahl);
+    this.fullName = this.firstName + ' ' + this.lastName;
+    this.dataServ.setElem(this.fullName, this.bootbez, this.ort, this.kmAnzahl);
 
-    this.name = '';
+    this.firstName = '';
     this.bootbez = '';
     this.ort = '';
     this.kmAnzahl = '';

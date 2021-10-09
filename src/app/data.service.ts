@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable, of, Subject} from "rxjs";
+import {HttpClient} from "@angular/common/http";
 
 
 export interface PeriodicElement {
@@ -15,24 +16,26 @@ export interface PeriodicElement {
 export class DataService {
 
   fahrtenSubject: Subject<PeriodicElement[]>;
+  readonly fahrten: PeriodicElement[];
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.fahrtenSubject = new Subject<PeriodicElement[]>();
+    this.fahrten = [];
   }
 
-
-  private fahrten:PeriodicElement[] = [
-    { name: 'Bootsfahrer Jackson', bootbez: '6941', ort: 'Budapest', kmAnzahl: '12'}
-  ];
-
   setElem(nameNew: string, bootbezNew: string, ortNew: string, kmAnzahlNew: string) {
-    console.log(nameNew)
-    console.log(bootbezNew)
-    console.log(ortNew)
-    console.log(kmAnzahlNew)
-    this.fahrten.push({name: nameNew, bootbez: bootbezNew, ort: ortNew, kmAnzahl: kmAnzahlNew})
-    //this.fahrten.push({name: 'Bootsfahrer Jackson', bootbez: '6941', ort: 'Budapest', kmAnzahl: '12'});
+    console.log({nameNew, bootbezNew, ortNew, kmAnzahlNew});
+
+    const fahrt = {name: nameNew, bootbez: bootbezNew, ort: ortNew, kmAnzahl: kmAnzahlNew};
+
+    this.fahrten.push(fahrt);
+
+    this.http.post('', fahrt).subscribe(value => {
+      console.log(value);
+    });
+
     console.log(this.fahrten);
+
     this.fahrtenSubject.next(this.fahrten);
   }
 

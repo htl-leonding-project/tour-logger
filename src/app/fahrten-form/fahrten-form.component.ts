@@ -14,11 +14,15 @@ export class FahrtenFormComponent implements OnInit {
   ort: any;
   kmAnzahl: any;
 
-  constructor(public dataServ:DataService) { }
+  constructor(public dataServ:DataService) { };
 
   addEntry() {
     this.dataServ.setElem(this.name, this.bootbez, this.ort, this.kmAnzahl);
-    console.log("TEST")
+
+    this.name = '';
+    this.bootbez = '';
+    this.ort = '';
+    this.kmAnzahl = '';
   }
 
   ngOnInit(): void {

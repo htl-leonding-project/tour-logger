@@ -10,11 +10,15 @@ import {Observable} from "rxjs";
 export class ShowAllComponent implements OnInit {
 
   public name: any;
+  dataSource: PeriodicElement[];
 
-  displayedColumns: string[] = ['name', 'bootbez', 'ort', 'kmAnzahl'];
-  dataSource: any;
+  constructor(public dataServ: DataService) {
+    // this.dataSource = [];
 
-  constructor(public dataServ:DataService) {
+    this.dataSource = this.dataServ.fahrten;
+
+    console.log(this.dataSource);
+
     this.dataServ.getItems().subscribe(value => {
       this.dataSource = value;
     });

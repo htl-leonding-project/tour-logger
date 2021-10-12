@@ -28,10 +28,11 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Build with Maven
+      working-directory: backend
       run: |
         mvn -B package --file pom.xml
         ls -lah
-      working-directory: backend
+      
         
     - name: install ssh key
         uses: caberger/install-ssh-key@v1.0
@@ -44,5 +45,3 @@ jobs:
         echo "this is a test" > ~/test.txt
         scp ~/target/tour-logger-1.0.0-SNAPSHOT.jar server:~/
         ssh server "ls -l ~"
-
-        

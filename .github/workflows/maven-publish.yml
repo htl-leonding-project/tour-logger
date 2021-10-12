@@ -32,14 +32,14 @@ jobs:
         mvn -B package --file pom.xml
         ls -lah
       working-directory: backend
-      
+
     - name: install ssh key
-        uses: caberger/install-ssh-key@v1.0
-        with:
-          ssh-private-key:  ${{ secrets.SSH_SERVER_PRIVATE_KEY }}
-          user: ${{ secrets.SERVER_USER }}
-          server: ${{ secrets.SERVER }}
-          alias: server
+      uses: caberger/install-ssh-key@v1.0
+      with:
+        ssh-private-key:  ${{ secrets.SSH_SERVER_PRIVATE_KEY }}
+        user: ${{ secrets.SERVER_USER }}
+        server: ${{ secrets.SERVER }}
+        alias: server
     - run: |
         echo "this is a test" > ~/test.txt
         scp ~/target/tour-logger-1.0.0-SNAPSHOT.jar server:~/

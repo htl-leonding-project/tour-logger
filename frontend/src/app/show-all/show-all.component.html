@@ -1,0 +1,20 @@
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Ort</th>
+    <th>Bootbezeichnung</th>
+    <th>km-Anzahl</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let d of dataSource">
+      <td>{{ d.name }}</td>
+      <td>{{ d.ort }}</td>
+      <td>{{ d.bootbez }}</td>
+      <td>{{ d.kmAnzahl }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button mat-stroked-button color="primary" routerLink="/new">Neuer Eintrag</button>

@@ -1,0 +1,39 @@
+GET localhost:8080/api/findAll
+
+###
+
+POST localhost:8080/api/add
+Content-Type: application/json
+
+{
+  "firstName": "Martin",
+  "lastName": "Kerschner",
+  "boat": "Titanic",
+  "destination": "Linz",
+  "distance": 29
+}
+
+###
+
+POST localhost:8080/api/add
+Content-Type: application/json
+
+{
+"firstName": "Tobias",
+"lastName": "Höfler",
+"boat": "Titanic2",
+"destination": "Enns",
+"distance": 29
+}
+
+###
+
+GET localhost:8080/api/getAll
+
+###
+
+DELETE localhost:8080/api/deletebyid/2
+
+###
+
+GET localhost:8080/api/getAll

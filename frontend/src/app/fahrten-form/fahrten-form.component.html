@@ -1,0 +1,50 @@
+<h1>Neue Eintragung</h1>
+<mat-form-field appearance="fill">
+  <mat-label>Vorname</mat-label>
+  <input matInput [(ngModel)]="firstName">
+<!--  <mat-error *ngIf="validator.get('firstName').hasError('required')">
+    First Name is Required!
+  </mat-error>-->
+</mat-form-field>
+
+
+<mat-form-field appearance="fill">
+  <mat-label>Nachname</mat-label>
+  <input matInput [(ngModel)]="lastName">
+<!--  <mat-error *ngIf="validator.get('lastName').hasError('required')">
+    First Name is Required!
+  </mat-error>-->
+</mat-form-field>
+
+
+<mat-form-field appearance="fill">
+  <mat-label>Bootbezeichnung</mat-label>
+  <input matInput [(ngModel)]="bootbez">
+<!--  <mat-error *ngIf="validator.get('bootbez').hasError('required')">
+    First Name is Required!
+  </mat-error>-->
+</mat-form-field>
+
+
+<mat-form-field appearance="fill" >
+  <mat-label>Ziel Ort</mat-label>
+  <input matInput [(ngModel)]="ort">
+<!--  <mat-error *ngIf="validator.get('ort').hasError('required')">
+    First Name is Required!
+  </mat-error>-->
+</mat-form-field>
+
+
+<mat-form-field appearance="fill" >
+  <mat-label>km-Anzahl</mat-label>
+  <input matInput type="number" [(ngModel)]="kmAnzahl">
+<!--  <mat-error *ngIf="validator.get('kmAnzahl').hasError('required')">
+    First Name is Required!
+  </mat-error>-->
+</mat-form-field>
+
+<button mat-stroked-button color="primary" (click)="addEntry()">Eingabe</button>
+
+<br><br>
+
+<button mat-stroked-button color="primary" routerLink="/show">Einträge</button>

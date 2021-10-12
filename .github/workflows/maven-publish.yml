@@ -28,17 +28,19 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: |
+        mvn -B package --file pom.xml
+        ls -lah
       working-directory: backend
         
-    - name: install ssh key
-        uses: caberger/install-ssh-key@v1.0
-        with:
-          ssh-private-key:  ${{ secrets.SSH_SERVER_PRIVATE_KEY }}
-          user: ${{ secrets.SERVER_USER }}
-          server: ${{ secrets.SERVER }}
-          alias: server
-    - run: |
-        echo "this is a test" > ~/test.txt
-        scp ~/target server:~/
-        ssh server "ls -l ~"
+- name: install ssh key
+    uses: caberger/install-ssh-key@v1.0
+    with:
+      ssh-private-key:  ${{ secrets.SSH_SERVER_PRIVATE_KEY }}
+      user: ${{ secrets.SERVER_USER }}
+      server: ${{ secrets.SERVER }}
+      alias: server
+- run: |
+    echo "this is a test" > ~/test.txt
+    scp ~/target server:~/
+    ssh server "ls -l ~"

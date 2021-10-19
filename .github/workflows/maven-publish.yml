@@ -34,12 +34,20 @@ jobs:
       working-directory: backend
 
     - name: install ssh key
-      uses: caberger/install-ssh-key@v1.0
+      uses: webfactory/ssh-agent@v0.4.1
       with:
-        ssh-private-key:  ${{ secrets.ORAVM }}
-        user: ${{ secrets.ORAVM_USER }}
-        server: ${{ secrets.ORAVM_IP }}
-        alias: server
-    - run: |
-        scp ~/target/tour-logger-1.0.0-SNAPSHOT.jar server:~/
-        ssh server "ls target -lah"
+        ssh-private-key: ${{ secrets.ORAVM }}
+    - name: create .ssh/known_hosts
+      run: |
+        ssh-keyscan -H -t rsa -v ${{ secrets.ORAVM_IP }}  >> ~/.ssh/known_hosts
+
+#    - name: install ssh key
+#      uses: caberger/install-ssh-key@v1.0
+#      with:
+#        ssh-private-key:  ${{ secrets.ORAVM }}
+#        user: ${{ secrets.ORAVM_USER }}
+#        server: ${{ secrets.ORAVM_IP }}
+#        alias: server
+#    - run: |
+#        scp ~/target/tour-logger-1.0.0-SNAPSHOT.jar server:~/
+#        ssh server "ls target -lah"

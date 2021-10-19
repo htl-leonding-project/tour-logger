@@ -41,6 +41,6 @@ jobs:
         server: ${{ secrets.ORAVM_IP }}
         alias: server
     - run: |
-        echo "this is a test" > ~/test.txt
+#        echo "this is a test" > ~/test.txt
         scp ~/target/tour-logger-1.0.0-SNAPSHOT.jar server:~/
-        ssh server "ls -l ~"
+        ssh server "ls target -lah"

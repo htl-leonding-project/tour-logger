@@ -36,10 +36,10 @@ jobs:
     - name: install ssh key
       uses: webfactory/ssh-agent@v0.4.1
       with:
-        ssh-private-key: ${{ secrets.ORAVM }}
+        ssh-private-key: ${{ secrets.TOURLOGGER_PRIVATE_KEY }}
     - name: create .ssh/known_hosts
       run: |
-        ssh-keyscan -H -t rsa -v ${{ secrets.ORAVM_IP }}  >> ~/.ssh/known_hosts
+        ssh-keyscan -H -t rsa -v ${{ secrets.TOURLOGGER_IP }}  >> ~/.ssh/known_hosts
 
 #    - name: install ssh key
 #      uses: caberger/install-ssh-key@v1.0

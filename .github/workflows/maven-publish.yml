@@ -36,9 +36,9 @@ jobs:
     - name: install ssh key
       uses: caberger/install-ssh-key@v1.0
       with:
-        ssh-private-key:  ${{ secrets.SSH_SERVER_PRIVATE_KEY }}
-        user: ${{ secrets.SERVER_USER }}
-        server: ${{ secrets.SERVER }}
+        ssh-private-key:  ${{ secrets.ORAVM }}
+        user: ${{ secrets.ORAVM_USER }}
+        server: ${{ secrets.ORAVM_IP }}
         alias: server
     - run: |
         echo "this is a test" > ~/test.txt

@@ -42,8 +42,12 @@ jobs:
         ssh-keyscan -H -t rsa -v ${{ secrets.TOURLOGGER_IP }}  >> ~/.ssh/known_hosts
 
     - run: |
-        scp ~/target/tour-logger-1.0.0-SNAPSHOT.jar ${{ secrets.TOURLOGGER_IP }}:~/
-        ssh ${{ secrets.TOURLOGGER_IP }} "ls target -lah"
+        echo "this is a test" > ~/test.txt
+        scp ~/test.txt server:~/
+        ssh server "ls -l ~"
+
+#        scp ~/target/tour-logger-1.0.0-SNAPSHOT.jar ${{ secrets.TOURLOGGER_IP }}:~/
+#        ssh ${{ secrets.TOURLOGGER_IP }} "ls target -lah"
 
 #    - name: install ssh key
 #      uses: caberger/install-ssh-key@v1.0

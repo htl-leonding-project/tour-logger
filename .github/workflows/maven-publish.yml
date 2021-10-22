@@ -43,8 +43,8 @@ jobs:
 
     - run: |
         echo "this is a test" > ~/test.txt
-        scp ~/test.txt server:~/
-        ssh server "ls -l ~"
+        scp ~/test.txt ${{ secrets.TOURLOGGER_IP }}:~/
+        ssh ${{ secrets.TOURLOGGER_IP }} "ls -l ~"
 
 #        scp ~/target/tour-logger-1.0.0-SNAPSHOT.jar ${{ secrets.TOURLOGGER_IP }}:~/
 #        ssh ${{ secrets.TOURLOGGER_IP }} "ls target -lah"

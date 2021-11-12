@@ -36,7 +36,7 @@ jobs:
     - name: install ssh key
       uses: webfactory/ssh-agent@v0.4.1
       with:
-        ssh-private-key: ${{ secrets.TOURLOGGER_PRIVATE_KEY }}
+        ssh-private-key: ${{ secrets.TOURLOGGER_PUB_KEY }}
     - name: create .ssh/known_hosts
       run: |
         ssh-keyscan -H -t rsa -v ${{ secrets.TOURLOGGER_IP }}  >> ~/.ssh/known_hosts

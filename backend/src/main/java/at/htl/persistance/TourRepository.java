@@ -7,4 +7,5 @@ import javax.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class TourRepository implements PanacheRepository<Tour> {
+
 }

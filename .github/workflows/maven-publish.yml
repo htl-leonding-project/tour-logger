@@ -40,6 +40,8 @@ jobs:
     - name: create .ssh/known_hosts
       run: |
         ssh-keyscan -H -t rsa -v ${{ secrets.TOURLOGGER_IP }}  >> ~/.ssh/known_hosts
+
+    - run: |
         echo "this is a test" > ~/test.txt
         scp ~/test.txt ${{ secrets.TOURLOGGER_IP }}:~/
         ssh ${{ secrets.TOURLOGGER_IP }} "ls -l ~"

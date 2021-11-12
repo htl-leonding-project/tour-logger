@@ -9,6 +9,7 @@ import javax.persistence.*;
 @Table(name = "TOUR")
 public class Tour {
 
+
     @Id @Column(name = "T_ID") @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
     @Column(name = "T_FIRST_NAME")

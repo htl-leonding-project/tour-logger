@@ -34,17 +34,17 @@ jobs:
       working-directory: backend
 
     - name: install ssh key
-      uses: webfactory/ssh-agent@v0.4.1
+      uses: caberger/install-ssh-key@v1.0
       with:
-        ssh-private-key: ${{ secrets.TOURLOGGER_PRIVATE_KEY }}
-    - name: create .ssh/known_hosts
-      run: |
-        ssh-keyscan -H -t rsa -v ${{ secrets.TOURLOGGER_IP }}  >> ~/.ssh/known_hosts
+        ssh-private-key:  ${{ secrets.TOURLOGGER_PRIVATE_KEY }}
+        user: ubuntu
+        server: ${{ secrets.TOURLOGGER_IP }}
+        alias: server
 
     - run: |
         echo "this is a test" > ~/test.txt
-        scp ~/test.txt ${{ secrets.TOURLOGGER_IP }}:~/
-        ssh ${{ secrets.TOURLOGGER_IP }} "ls -l ~"
+        scp ~/test.txt server:~/
+        ssh server "ls -l ~"
 
 #        scp ~/target/tour-logger-1.0.0-SNAPSHOT.jar ${{ secrets.TOURLOGGER_IP }}:~/
 #        ssh ${{ secrets.TOURLOGGER_IP }} "ls target -lah"

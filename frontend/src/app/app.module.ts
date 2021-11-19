@@ -19,13 +19,15 @@ import { MatListModule } from '@angular/material/list';
 import {MatTableModule} from "@angular/material/table";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HttpClientModule} from "@angular/common/http";
+import { LandingComponent } from './landing/landing.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FahrtenFormComponent,
-    ShowAllComponent
+    ShowAllComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,

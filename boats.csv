@@ -1,0 +1,48 @@
+Id|Name|NameAffix|Owner|LastVariant|DefaultVariant|TypeVariant|TypeDescription|TypeType|TypeSeats|TypeRigging|TypeCoxing|AllowedGroupIdList|MaxNotInGroup|RequiredGroupId|OnlyWithBoatCaptain|Manufacturer|Model|MaxCrewWeight|ManufactionDate|SerialNo|PurchaseDate|PurchasePrice|SellingDate|SellingPrice|PurchasePriceCurrency|InsuranceValue|DefaultCrewId|DefaultSessionType|DefaultDestinationId|ExcludeFromStatistics|FreeUse1|FreeUse2|FreeUse3|EfbId|ValidFrom|InvalidFrom|Invisible|Deleted|ChangeCount|LastModified
+80a10413-2685-402f-9484-9405c69d4e8b|Marie - Therese|WSV Bootshütte|Anselm|1|1|1|~|Rennboot|Achter|Riemen|mit Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618330640236
+8acd060b-5dcd-4f54-b403-9954282af669|Luggy|||1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618330552133
+8d0e9492-42d6-4fac-b356-9d38dec854f6|Wolf|||1|1|1|~|Rennboot|Doppelvierer|Skull|mit Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618332730747
+98649686-002a-4c20-8d2d-7e4557562ba8|20er|||1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||4|1618328411620
+99a049d4-b346-4db1-a5a9-e0108813d590|Anna& Niki|Schwimmende Bootshalle|Anselm|1|1|1|~|Rennboot|Zweier|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618329216260
+9a7bbc6e-a8d4-4fd3-967d-fdf3f71ea4a6|Montrial|WSV Anbau||1|1|1|Holzboot|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618330877294
+9dba0eec-88c8-44d3-94c1-b6ec205da8e2|Silberpfeil|Schwimmende Bootshalle||1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618332354606
+9e424c3d-9bdc-4237-addd-300a53c65678|Hartl Privat|WSV Bootshütte|Doris Hartl|1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618330048792
+9fc0ec50-0f4a-48f3-a6bf-90438cc2c232|Andrea|Schwimmende Bootshalle|WSV|1|1|1|~|Rennboot|Vierer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618329127595
+a3f7d06c-15f3-4cee-b510-35058b94a2cd|ON Filippi|Schwimmende Bootshalle|Anselm|1|1|1|~|Rennboot|Doppelzweier|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618331255502
+aca3008e-f232-4f53-a561-c2d00961a4e0|Lisa|Schwimmende Bootshalle||1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618330376663
+ad90eb9e-b074-4cb6-bcaf-7d5e703b0c1f|Rudi|WSV Anbau||1|1|1|~|Rennboot|Doppelzweier|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618332111970
+ba8795e3-955d-418d-bc9e-7c4162c9bd00|Speedy|WSV Anbau||1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618332459290
+bf68bcbd-346f-4500-ac45-57fd13ae6e21|Donaukiesel|WSV Bootshütte||1|1|1|WSV Bootshütte|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618329465947
+c0599e4e-13eb-4c08-b3b2-b6b8b88babcd|Morgensonne|Schwimmende Bootshalle||1|1|1|~|Rennboot|Zweier|andere|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618330961069
+ccbae981-98a0-4e0c-ae2a-61bde11fae75|Ottensheim|WSV Bootshütte||1|1|1|~|C-Gig|Doppelvierer|Skull|mit Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618331395115
+d2f6805a-4a4f-4337-8244-1de80d502ba8|Theresa|||1|1|1|~|Rennboot|Doppelzweier|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618332569331
+d92072eb-6143-477a-8e09-9d09796700f3|Moewe|WSV Anbau|Sigl|1|1|1|~|B-Gig|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618330784022
+f2553682-1975-4515-91cb-5b82214dd0cf|Gruen|Schwimmende Bootshalle||1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618329819978
+f966e49c-04e3-4c8d-95d0-696822105f3e|Grein|WSV Bootshütte|WSV|1|1|1|~|C-Gig|Vierer|Skull|mit Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618329746881
+038bafb5-a60f-492b-b18e-a29e8bc4744f|Dovian|WSV Bootshütte||1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618329529097
+08b68a6d-f013-46a5-a3ca-9f199a8fae56|Bürgermeister|Schwimmende Bootshalle||1|1|1|~|Rennboot|Vierer|andere|mit Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618329381370
+09c3e2cc-d7f8-4266-8b14-20d9f63471e0|Niki|WSV Anbau||1|1|1|~|Rennboot|Zweier|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618331021443
+105b0533-7f8b-4507-9c7d-828d63f50d3e|Optimus Pime|Schwimmende Bootshalle||1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618331340269
+194e53b0-523b-4c6f-9fac-18b29cda08ff|ASVOE-OOE|Schwimmende Bootshalle||1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618329296313
+1a29ced8-3f25-4861-8f75-91f350ef9e6c|Alex|||1|1|1|Holzboot|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|true||3|1618329667398
+23c3347a-43f5-49bf-9286-5bb923528806|Rainer|Neubau|Kepplinger|1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618331918195
+2716d4d2-a873-4196-be8c-d6913c96c270|NoRiskNoFun|WSV Bootshütte||1|1|1|Empacher|Rennboot|Achter|Riemen|mit Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618331184636
+2b5e88a2-e7de-4e0d-b489-05019c7e7cb9|Rosinante|Schwimmende Bootshalle||1|1|1|~|Rennboot|andere|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618332065761
+2ce6b5c8-5214-4019-b048-e200fa79dce4|Yellow Submarine|Schwimmende Bootshalle||1|1|1|~|Rennboot|Zweier|andere|ohne Stm.||||||||||||||||||||||||0|9223372036854775807|||2|1618332884427
+2e438004-ad69-4df4-8428-755d2dd5b117|Rapunzel|WSV Bootshalle||1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618332003660
+2eb64608-7a70-4cbe-b8e2-3c720dfda013|Hanni|Schwimmende Bootshalle||1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618329883763
+30bbf1c5-3465-4b04-8734-5946025b76ab|Sputnik|Schwimmende Bootshalle||1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618332527888
+3878ac5a-a549-416b-b3ca-55ab37e2342b|59|Filippi Neubau||1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618328903863
+38f38e4a-b59e-4f03-98a3-cd342acc7458|Schneckenpost|WSV Bootshalle||1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618332181545
+3c528308-ec54-44c3-a27d-e539e52da8ae|Eva Koenig|Schwimmende Bootshalle||1|1|1|~|andere|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618330249272
+44fc2558-761c-424d-ad1a-2cf8a25c4e48|Seebaer|Schwimmende Bootshalle||1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618332298350
+4669d288-7903-4895-ba61-138e4753298a|Luggi|||1|1|1|~|Rennboot|Doppelzweier|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618330427540
+4ae77f58-689b-44b9-91c5-61398269e00b|41|Filippi Neubau|Neubau|1|1|1|~|Rennboot|Einer|Skull|andere||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618328504702
+4f1130a0-d84a-4347-ae3d-9b30946da9c0|Smilla|Schwimmende Bootshalle||1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618332414694
+5939ea3e-555f-4ac2-a483-b2b540e043e2|Hermi|Schwimmende Bootshalle||1|1|1|Anselm Horst|Rennboot|Vierer|andere|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618330163538
+65046c1d-e4d0-4051-8a23-48814f82ce8b|Schwarzer Adler|||1|1|1|~|Rennboot|Doppelvierer|Skull|mit Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618332227146
+67cb0678-0a6a-41e0-b8ca-ebe1d443becc|Nikolaus|Schwimmende Bootshalle|Anselm|1|1|1|~|Rennboot|Zweier|andere|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618331089735
+6e68bd2e-122f-4830-b4cd-fda263072577|Wolfgang|Schwimmende Bootshalle||1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618332777220
+707a0d92-6cb9-404c-994f-4de306a79d92|Men at work|||1|1|1|Holzboot|Rennboot|Doppelvierer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618330715261
+71dd1137-6c1b-45b0-8cb3-f664ddf84cc0|Traunstein|WSV Bootshalle||1|1|1|~|Rennboot|Doppelachter|Skull|mit Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618332630652
+78fe1855-c3a5-412b-a689-8101345aebef|Luggi|Anbau|Sigl Privat|1|1|1|~|Rennboot|Einer|Skull|ohne Stm.||||||||||||||||||||||||1604185200000|9223372036854775807|||2|1618330507203

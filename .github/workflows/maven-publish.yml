@@ -42,7 +42,7 @@ jobs:
         alias: server
 
     - run: |
-        scp backend/target/tour-logger-1.0.0-SNAPSHOT.jar server:~/
+        scp backend/target/tour-logger-1.0.0-SNAPSHOT-runner.jar server:~/
         ssh server "ls -l ~"
 
 #        scp ~/target/tour-logger-1.0.0-SNAPSHOT.jar ${{ secrets.TOURLOGGER_IP }}:~/

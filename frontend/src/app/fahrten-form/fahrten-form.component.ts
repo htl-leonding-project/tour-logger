@@ -4,6 +4,10 @@ import {DataService} from '../data.service'
 import { PeriodicElement} from "../data.service";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
+import {FormControl} from '@angular/forms';
+import {Observable} from 'rxjs';
+import {map, startWith} from 'rxjs/operators';
+
 @Component({
   selector: 'app-fahrten-form',
   templateUrl: './fahrten-form.component.html',
@@ -17,14 +21,11 @@ export class FahrtenFormComponent implements OnInit {
   kmAnzahl: any;
   fullName: any;
 
-  /*validator: any;
-  validator = this.formBuilder.group({
-    firstName: ['', Validators.required],
-    lastName: ['', Validators.required],
-    bootbez: ['', Validators.required],
-    ort: ['', Validators.required],
-    kmAnzahl: ['', Validators.required],
-  });*/
+  myControl = new FormControl();
+  options: string[] = ['One', 'Two', 'Three'];
+  // @ts-ignore
+  filteredOptions: Observable<string[]>;
+
 
 
   constructor(public dataServ:DataService) { };
@@ -40,9 +41,17 @@ export class FahrtenFormComponent implements OnInit {
     this.kmAnzahl = '';
   }
 
+  ngOnInit() {
+    this.filteredOptions = this.myControl.valueChanges.pipe(
+        startWith(''),
+        map(value => this._filter(value)),
+    );
+  }
 
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
 
-  ngOnInit(): void {
+    return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
 
 }

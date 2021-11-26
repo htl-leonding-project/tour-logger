@@ -7,7 +7,7 @@ import { ShowAllComponent } from './show-all/show-all.component';
 import { AppRoutingModule } from './app-routing.module';
 
 
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
@@ -20,6 +20,12 @@ import {MatTableModule} from "@angular/material/table";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HttpClientModule} from "@angular/common/http";
 import { LandingComponent } from './landing/landing.component';
+
+
+import {Observable} from 'rxjs';
+import {map, startWith} from 'rxjs/operators';
+import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import {MatOptionModule} from "@angular/material/core";
 
 
 @NgModule({
@@ -44,7 +50,10 @@ import { LandingComponent } from './landing/landing.component';
     MatTableModule,
     BrowserModule,
     AppRoutingModule,
-      HttpClientModule
+    HttpClientModule,
+    MatAutocompleteModule,
+    MatOptionModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

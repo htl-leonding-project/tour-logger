@@ -22,11 +22,59 @@ export class FahrtenFormComponent implements OnInit {
   fullName: any;
 
   myControl = new FormControl();
-  options: string[] = ['One', 'Two', 'Three'];
+  options: string[] = ['Marie - Therese',
+    'Luggy',
+    'Wolf',
+    '20er',
+    'Anna & Niki',
+    'Montrial',
+    'Silberpfeil',
+    'Hartl Privat',
+    'Andrea',
+    'ON Filippi',
+    'Lisa',
+    'Rudi',
+    'Speedy',
+    'Donaukiesel',
+    'Morgensonne',
+    'Ottensheim',
+    'Theresa',
+    'Moewe',
+    'Gruen',
+    'Grein',
+    'Dovian',
+    'Bürgermeister',
+    'Niki',
+    'Optimus Prime',
+    'ASVOE-OOE',
+    'Alex',
+    'Rainer',
+    'NoRiskNoFun',
+    'Rosinante',
+    'Yellow Submarine',
+    'Rapunzel',
+    'Hanni',
+    'Sputnik',
+    '59',
+    'Schneckenpost',
+    'Eva Koenig',
+    'Seebaer',
+    'Luggi',
+    '41',
+    'Smilla',
+    'Hermi',
+    'Schwarzer Adler',
+    'Nikolaus',
+    'Wolfgang',
+    'Men at work',
+    'Traunstein',
+    'Luggi'];
+
+
+
+
   // @ts-ignore
   filteredOptions: Observable<string[]>;
-
-
 
   constructor(public dataServ:DataService) { };
 

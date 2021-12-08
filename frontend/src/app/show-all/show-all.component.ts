@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService, PeriodicElement} from '../data.service'
+import {DataService, FahrtenInterface} from '../data.service'
 import {Observable} from "rxjs";
+
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-show-all',
@@ -10,19 +12,22 @@ import {Observable} from "rxjs";
 export class ShowAllComponent implements OnInit {
 
   public name: any;
-  dataSource: PeriodicElement[];
+  dataSource: FahrtenInterface[];
 
-  constructor(public dataServ: DataService) {
+  constructor(public dataServ: DataService, private http: HttpClient) {
     // this.dataSource = [];
+
+
 
     this.dataSource = this.dataServ.fahrten;
 
-    console.log(this.dataSource);
 
     this.dataServ.getItems().subscribe(value => {
       this.dataSource = value;
     });
   }
+
+  
 
   ngOnInit(): void {
   }

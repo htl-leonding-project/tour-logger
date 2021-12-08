@@ -32,7 +32,7 @@ GET localhost:8080/api/getAll
 
 ###
 
-DELETE localhost:8080/api/deletebyid/2
+DELETE localhost:8080/api/deletebyid/3
 
 ###
 

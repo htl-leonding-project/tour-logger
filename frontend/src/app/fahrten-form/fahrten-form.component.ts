@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import {DataService} from '../data.service'
-import { PeriodicElement} from "../data.service";
+import { FahrtenInterface} from "../data.service";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 import {FormControl} from '@angular/forms';
@@ -70,9 +70,7 @@ export class FahrtenFormComponent implements OnInit {
     'Traunstein',
     'Luggi'];
 
-
-
-
+  
   // @ts-ignore
   filteredOptions: Observable<string[]>;
 

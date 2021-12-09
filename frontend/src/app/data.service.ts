@@ -35,7 +35,7 @@ export class DataService {
 
   setElem(nameNew: string, bootbezNew: string, ortNew: string, kmAnzahlNew: string) {
 
-    console.log({nameNew, bootbezNew, ortNew, kmAnzahlNew});
+    //console.log({nameNew, bootbezNew, ortNew, kmAnzahlNew});
 
     //const fahrt = {name: nameNew, bootbez: bootbezNew, ort: ortNew, kmAnzahl: kmAnzahlNew};
     const fahrt = {boat: bootbezNew,
@@ -50,7 +50,8 @@ export class DataService {
       console.log(value);
     });
 
-    console.log(this.fahrten);
+
+    //console.log(this.fahrten);
 
     this.fahrtenSubject.next(this.fahrten);
 

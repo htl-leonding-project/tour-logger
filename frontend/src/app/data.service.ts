@@ -35,20 +35,22 @@ export class DataService {
 
   setElem(nameNew: string, bootbezNew: string, ortNew: string, kmAnzahlNew: string) {
 
-    //console.log({nameNew, bootbezNew, ortNew, kmAnzahlNew});
+    console.log({nameNew, bootbezNew, ortNew, kmAnzahlNew});
 
     //const fahrt = {name: nameNew, bootbez: bootbezNew, ort: ortNew, kmAnzahl: kmAnzahlNew};
-    const fahrt = {boat: bootbezNew,
+    const fahrt = {
+      boat: bootbezNew,
       destination: ortNew,
       distance: kmAnzahlNew,
       firstName: nameNew,
       lastName: nameNew};
 
-    this.fahrten.push(fahrt);
+      this.fahrten.push(fahrt);
 
-    this.http.post('localhost:8080/api/add', fahrt).subscribe(value => {
-      console.log(value);
-    });
+      this.http.post(`${BASE_URL}/add`, fahrt).subscribe(value => {
+        console.log(value);
+      }
+    );
 
 
     //console.log(this.fahrten);

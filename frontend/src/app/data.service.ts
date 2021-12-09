@@ -42,8 +42,8 @@ export class DataService {
       boat: bootbezNew,
       destination: ortNew,
       distance: kmAnzahlNew,
-      firstName: nameNew,
-      lastName: nameNew};
+      firstName: nameNew.split(" ", 3)[0],
+      lastName: nameNew.split(" ", 3)[1]};
 
       this.fahrten.push(fahrt);
 

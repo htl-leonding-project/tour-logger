@@ -7,3 +7,9 @@
 h1 {
   font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
 }
+
+.wsvLogo {
+  max-width: 100%;
+  width: 50vw;
+  height: 50vh;
+}

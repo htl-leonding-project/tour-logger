@@ -247,22 +247,22 @@ tbody tr:hover {
         top: 0;
     }
     table tbody tr td:nth-child(1):before {
-        content: "Date";
-    }
-    table tbody tr td:nth-child(2):before {
-        content: "Order ID";
-    }
-    table tbody tr td:nth-child(3):before {
         content: "Name";
     }
+    table tbody tr td:nth-child(2):before {
+        content: "Ziel";
+    }
+    table tbody tr td:nth-child(3):before {
+        content: "Bootsname";
+    }
     table tbody tr td:nth-child(4):before {
-        content: "Price";
+        content: "Distanz (km)";
     }
     table tbody tr td:nth-child(5):before {
         content: "Quantity";
     }
     table tbody tr td:nth-child(6):before {
-        content: "Total";
+        content: "Boot";
     }
 
     .column4,

@@ -45,6 +45,7 @@ jobs:
         scp backend/target/tour-logger-1.0.0-SNAPSHOT-runner.jar server:~/
         scp backend/setup.sh server:~/
         scp backend/docker/mysql/docker-compose.yml server:~/
+        scp backend/install
         ssh server "ls -l ~"
 
 #        scp ~/target/tour-logger-1.0.0-SNAPSHOT.jar ${{ secrets.TOURLOGGER_IP }}:~/

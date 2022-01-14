@@ -1,7 +1,9 @@
 apt update
 apt upgrade
 apt install nginx -y
+apt install net-tools -y
 apt install docker -y
+apt install docker-compose -y
 mkdir -p /opt/tour-logger
 cat default.conf > /etc/nginx/sites-available/default
 systemctl restart nginx

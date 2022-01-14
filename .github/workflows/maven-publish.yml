@@ -33,6 +33,9 @@ jobs:
         ls -lah
       working-directory: backend
 
+    - name: Build Angular
+      run: ng build
+
     - name: install ssh key
       uses: caberger/install-ssh-key@v1.0
       with:
@@ -42,6 +45,7 @@ jobs:
         alias: server
 
     - run: |
+        scp -r frontend/dist/tl-frontend server:/var/www/html
         scp backend/target/tour-logger-1.0.0-SNAPSHOT-runner.jar server:~/
         ssh server "ls -l ~"
 

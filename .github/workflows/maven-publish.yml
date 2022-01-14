@@ -33,9 +33,6 @@ jobs:
         ls -lah
       working-directory: backend
 
-    - name: Build Angular
-      run: ng build
-
     - name: install ssh key
       uses: caberger/install-ssh-key@v1.0
       with:

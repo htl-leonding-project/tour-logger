@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of, Subject} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 
-const BASE_URL: string = 'http://localhost:8080/api'
+const BASE_URL: string = 'http://fahrtenbuch.hopto.org/api'
 
 /*export interface FahrtenInterface {
   name: string;

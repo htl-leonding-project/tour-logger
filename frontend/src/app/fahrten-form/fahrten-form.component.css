@@ -13,3 +13,7 @@ h1 {
   width: 50vw;
   height: 50vh;
 }
+
+mat-form-field {
+  width: 80%;
+}

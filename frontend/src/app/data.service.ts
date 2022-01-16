@@ -17,7 +17,6 @@ export interface FahrtenInterface {
   distance: string;
   firstName: string;
   lastName: string;
-
 }
 
 @Injectable({
@@ -38,13 +37,15 @@ export class DataService {
     console.log({nameNew, bootbezNew, ortNew, kmAnzahlNew});
 
     //const fahrt = {name: nameNew, bootbez: bootbezNew, ort: ortNew, kmAnzahl: kmAnzahlNew};
+
     const fahrt = {
       boat: bootbezNew,
       destination: ortNew,
       distance: kmAnzahlNew,
       firstName: nameNew.split(" ", 3)[0],
-      lastName: nameNew.split(" ", 3)[1]};
-
+      lastName: nameNew.split(" ", 3)[1]
+    };
+    
       this.fahrten.push(fahrt);
 
       this.http.post(`${BASE_URL}/add`, fahrt).subscribe(value => {
@@ -52,17 +53,13 @@ export class DataService {
       }
     );
 
-
-    //console.log(this.fahrten);
-
     this.fahrtenSubject.next(this.fahrten);
-
   }
+
 
   getItems(): Observable<FahrtenInterface[]> {
-
     console.log(this.http.get<FahrtenInterface[]>(`${BASE_URL}/findAll`));
     return this.http.get<FahrtenInterface[]>(`${BASE_URL}/findAll`);
-
   }
+  
 }

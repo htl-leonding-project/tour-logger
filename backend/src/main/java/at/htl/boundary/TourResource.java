@@ -14,9 +14,8 @@ import javax.ws.rs.core.UriInfo;
 import java.net.URI;
 import java.util.List;
 
-@Path("/api")
-@ApplicationScoped
-public class TourRessource {
+@Path("/tours")
+public class TourResource {
 
     @Inject
     TourRepository tr;

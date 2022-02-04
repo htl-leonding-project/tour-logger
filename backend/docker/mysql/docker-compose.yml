@@ -1,11 +1,11 @@
 version: '3.3'
 services:
-  backend:
-    image: ghcr.io/merisbsc/tour-logger-backend:latest
-    ports:
-      - 8080:8080
-    depends_on:
-      - mysql
+#  backend:
+#    image: ghcr.io/merisbsc/tour-logger-backend:latest
+#    ports:
+#      - 8080:8080
+#    depends_on:
+#      - mysql
   mysql:
     image: mysql:8
     cap_add:

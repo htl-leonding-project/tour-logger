@@ -16,18 +16,20 @@ public class Tour {
     String firstName;
     @Column(name = "T_LAST_NAME")
     String lastName;
-    @Column(name = "T_BOAT")
-    String boat;
     @Column(name = "T_DESTINATION")
     String destination;
     @Column(name = "T_DISTANCE")
     int distance;
+    @OneToOne(fetch = FetchType.LAZY)
+    Boat boat;
+
+
 
     //region constructors
     public Tour() {
     }
 
-    public Tour(Long id, String firstName, String lastName, String boat, String destination, int distance) {
+    public Tour(Long id, String firstName, String lastName, Boat boat, String destination, int distance) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -62,11 +64,11 @@ public class Tour {
         this.lastName = lastName;
     }
 
-    public String getBoat() {
+    public Boat getBoat() {
         return boat;
     }
 
-    public void setBoat(String boat) {
+    public void setBoat(Boat boat) {
         this.boat = boat;
     }
 

@@ -12,12 +12,12 @@ const BASE_URL: string = 'http://fahrtenbuch.hopto.org/api'
 }*/
 
 export interface FahrtenInterface {
+  id: number|null;
   boat: string;
   destination: string;
   distance: string;
   firstName: string;
   lastName: string;
-
 }
 
 @Injectable({
@@ -39,6 +39,7 @@ export class DataService {
 
     //const fahrt = {name: nameNew, bootbez: bootbezNew, ort: ortNew, kmAnzahl: kmAnzahlNew};
     const fahrt = {
+      id: null,
       boat: bootbezNew,
       destination: ortNew,
       distance: kmAnzahlNew,
@@ -60,9 +61,19 @@ export class DataService {
   }
 
   getItems(): Observable<FahrtenInterface[]> {
-
     console.log(this.http.get<FahrtenInterface[]>(`${BASE_URL}/findAll`));
     return this.http.get<FahrtenInterface[]>(`${BASE_URL}/findAll`);
+  }
 
+  deleteItem(id: Number){
+    this.http.delete(`${BASE_URL}/deletebyid/${id}`)
+        .subscribe({
+          next: data => {
+            console.log(`Fahrt #${id} ist gelöscht`)
+          },
+          error: error => {
+            console.error('There was an error!', error);
+          }
+        });
   }
 }

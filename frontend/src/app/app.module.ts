@@ -20,12 +20,9 @@ import {MatTableModule} from "@angular/material/table";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HttpClientModule} from "@angular/common/http";
 import { LandingComponent } from './landing/landing.component';
-
-
-import {Observable} from 'rxjs';
-import {map, startWith} from 'rxjs/operators';
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {MatOptionModule} from "@angular/material/core";
+import {MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBar} from "@angular/material/snack-bar";
 
 
 @NgModule({

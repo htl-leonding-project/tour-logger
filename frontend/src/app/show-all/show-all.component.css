@@ -262,11 +262,7 @@ tbody tr:hover {
         font-weight: bold;
         color:black;
     }
-    table tbody tr td:nth-child(5):before {
-        content: "Quantity";
-        font-weight: bold;
-        color:black;
-    }
+
     table tbody tr td:nth-child(6):before {
         content: "Boot";
         font-weight: bold;
@@ -298,8 +294,14 @@ tbody tr:hover {
         padding-left: 15px;
         padding-right: 15px;
     }
+
+    .delBtn {
+        align-content: center;
+    }
 }
 
 button {
+    align-content: center;
+    width: 30%;
     margin-top: 10%;
 }

@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <table>
   <thead>
   <tr>
@@ -5,6 +7,7 @@
     <th>Ort</th>
     <th>Bootbezeichnung</th>
     <th>km-Anzahl</th>
+    <th>Löschen</th>
   </tr>
   </thead>
   <tbody>
@@ -13,6 +16,7 @@
       <td>{{ d.destination }}</td>
       <td>{{ d.boat }}</td>
       <td>{{ d.distance }}</td>
+      <td class="delBtn"><button mat-stroked-button color="primary" (click)="delete(d)"><i class="fa fa-trash"></i></button></td>
     </tr>
   </tbody>
 </table>

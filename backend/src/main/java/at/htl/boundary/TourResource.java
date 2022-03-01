@@ -1,9 +1,8 @@
 package at.htl.boundary;
 
 import at.htl.model.Tour;
-import at.htl.persistance.TourRepository;
+import at.htl.persistence.TourRepository;
 
-import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;

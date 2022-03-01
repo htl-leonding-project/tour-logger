@@ -77,7 +77,10 @@ iframe {
 [ Utiliti ]*/
 
 
-
+#noTours {
+    margin-top: 15%;
+    color: rgb(96,63,172);
+}
 
 
 
@@ -243,17 +246,17 @@ tbody tr:hover {
         top: 0;
     }
     table tbody tr td:nth-child(1):before {
-        content: "Name";
+        content: "Boot";
         font-weight: bold;
         color:black;
     }
     table tbody tr td:nth-child(2):before {
-        content: "Ziel";
+        content: "Fahrer";
         font-weight: bold;
         color:black;
     }
     table tbody tr td:nth-child(3):before {
-        content: "Bootsname";
+        content: "Ort";
         font-weight: bold;
         color:black;
     }
@@ -264,7 +267,7 @@ tbody tr:hover {
     }
 
     table tbody tr td:nth-child(6):before {
-        content: "Boot";
+        content: "Löschen";
         font-weight: bold;
         color:black;
     }

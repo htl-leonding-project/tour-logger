@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService, FahrtenInterface} from '../data.service'
+import {BootInterface, DataService, FahrtenInterface} from '../data.service'
 import {Observable} from "rxjs";
 import {HttpClient} from '@angular/common/http';
 
@@ -11,26 +11,26 @@ import {HttpClient} from '@angular/common/http';
 export class ShowAllComponent implements OnInit {
 
   public name: any;
-  dataSource: FahrtenInterface[];
+  fahrten: FahrtenInterface[];
 
 
-  constructor(public dataServ: DataService,
-              private http: HttpClient) {
-    this.dataSource = this.dataServ.fahrten;
+  constructor(public dataServ: DataService) {
+    this.fahrten = this.dataServ.fahrten;
 
     this.dataServ.getItems().subscribe(value => {
-      this.dataSource = value;
+      this.fahrten = value;
     });
+
   }
 
   ngOnInit(): void {
   }
 
   delete(fahrt: FahrtenInterface) {
-    if(confirm(`Willst du die Fahrt von ${fahrt.firstName} ${fahrt.lastName} nach ${fahrt.destination} wirklich löschen?`)) {
+    if(confirm(`Willst du die Fahrt nach ${fahrt.destination} wirklich löschen?`)) {
       console.log(fahrt)
       this.dataServ.deleteItem(fahrt.id!);
-      this.dataSource.splice(this.dataSource.indexOf(fahrt), 1)
+      this.fahrten.splice(this.fahrten.indexOf(fahrt), 1)
     }
     //alert(`Fahrt von ${fahrt.firstName} ${fahrt.lastName} gelöscht!`)
   }

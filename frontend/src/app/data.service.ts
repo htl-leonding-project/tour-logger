@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of, Subject} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 
-const BASE_URL: string = 'http://fahrtenbuch.hopto.org/api'
+const BASE_URL: string = 'http://localhost:8080'
 
 /*export interface FahrtenInterface {
   name: string;
@@ -13,11 +13,17 @@ const BASE_URL: string = 'http://fahrtenbuch.hopto.org/api'
 
 export interface FahrtenInterface {
   id: number|null;
-  boat: string;
+  boat: BootInterface;
   destination: string;
   distance: string;
-  firstName: string;
-  lastName: string;
+  drivers: string[];
+}
+
+export interface BootInterface{
+  id: number|null;
+  name: String;
+  nrOfSeats: number;
+  typeSeats: String;
 }
 
 @Injectable({
@@ -27,28 +33,28 @@ export class DataService {
 
   fahrtenSubject: Subject<FahrtenInterface[]>;
   readonly fahrten: FahrtenInterface[];
+  readonly boote: BootInterface[];
 
   constructor(private http: HttpClient) {
     this.fahrtenSubject = new Subject<FahrtenInterface[]>();
     this.fahrten = [];
+    this.boote = [];
   }
 
-  setElem(nameNew: string, bootbezNew: string, ortNew: string, kmAnzahlNew: string) {
-
-    console.log({nameNew, bootbezNew, ortNew, kmAnzahlNew});
+  setFahrt(driverNames: string[], boot: BootInterface, ortNew: string, kmAnzahlNew: string) {
 
     //const fahrt = {name: nameNew, bootbez: bootbezNew, ort: ortNew, kmAnzahl: kmAnzahlNew};
     const fahrt = {
       id: null,
-      boat: bootbezNew,
+      boat: boot,
       destination: ortNew,
       distance: kmAnzahlNew,
-      firstName: nameNew.split(" ", 3)[0],
-      lastName: nameNew.split(" ", 3)[1]};
+      drivers: driverNames};
 
       this.fahrten.push(fahrt);
+      console.log(fahrt)
 
-      this.http.post(`${BASE_URL}/add`, fahrt).subscribe(value => {
+      this.http.post(`${BASE_URL}/tours/add`, fahrt).subscribe(value => {
         console.log(value);
       }
     );
@@ -61,12 +67,12 @@ export class DataService {
   }
 
   getItems(): Observable<FahrtenInterface[]> {
-    console.log(this.http.get<FahrtenInterface[]>(`${BASE_URL}/findAll`));
-    return this.http.get<FahrtenInterface[]>(`${BASE_URL}/findAll`);
+    console.log(this.http.get<FahrtenInterface[]>(`${BASE_URL}/tours/findAll`));
+    return this.http.get<FahrtenInterface[]>(`${BASE_URL}/tours/findAll`);
   }
 
   deleteItem(id: Number){
-    this.http.delete(`${BASE_URL}/deletebyid/${id}`)
+    this.http.delete(`${BASE_URL}/tours/deletebyid/${id}`)
         .subscribe({
           next: data => {
             console.log(`Fahrt #${id} ist gelöscht`)
@@ -75,5 +81,9 @@ export class DataService {
             console.error('There was an error!', error);
           }
         });
+  }
+
+  getBoats(): Observable<BootInterface[]>{
+    return this.http.get<BootInterface[]>(`${BASE_URL}/boats`);
   }
 }

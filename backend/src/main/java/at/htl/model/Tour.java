@@ -1,27 +1,24 @@
 package at.htl.model;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
-import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
-
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "TOUR")
 public class Tour {
 
 
-    @Id @Column(name = "T_ID") @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Column(name = "T_ID")
     Long id;
-    @Column(name = "T_FIRST_NAME")
-    String firstName;
-    @Column(name = "T_LAST_NAME")
-    String lastName;
     @Column(name = "T_DESTINATION")
     String destination;
     @Column(name = "T_DISTANCE")
     int distance;
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     Boat boat;
+    @ElementCollection
+    List<String> drivers;
 
 
 
@@ -29,14 +26,21 @@ public class Tour {
     public Tour() {
     }
 
-    public Tour(Long id, String firstName, String lastName, Boat boat, String destination, int distance) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.boat = boat;
+    public Tour(ArrayList<String> drivers, String destination, int distance, Boat boat) {
+        this.drivers = drivers;
         this.destination = destination;
         this.distance = distance;
+        this.boat = boat;
     }
+
+    public Tour(Long id, ArrayList<String> drivers, String destination, int distance, Boat boat) {
+        this.id = id;
+        this.drivers = drivers;
+        this.destination = destination;
+        this.distance = distance;
+        this.boat = boat;
+    }
+
     //endregion
 
     //region getset
@@ -48,20 +52,12 @@ public class Tour {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public List<String> getDrivers() {
+        return drivers;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setDrivers(List<String> drivers) {
+        this.drivers = drivers;
     }
 
     public Boat getBoat() {
@@ -94,11 +90,10 @@ public class Tour {
     public String toString() {
         return "Tour{" +
                 "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", boat='" + boat + '\'' +
+                ", drivers=" + drivers +
                 ", destination='" + destination + '\'' +
                 ", distance=" + distance +
+                ", boat=" + boat +
                 '}';
     }
 }

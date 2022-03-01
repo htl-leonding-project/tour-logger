@@ -23,6 +23,7 @@ import { LandingComponent } from './landing/landing.component';
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {MatOptionModule} from "@angular/material/core";
 import {MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBar} from "@angular/material/snack-bar";
+import {MatSelectModule} from "@angular/material/select";
 
 
 @NgModule({
@@ -32,26 +33,27 @@ import {MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBar} from "@angular/material/snac
     ShowAllComponent,
     LandingComponent
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatTableModule,
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    MatAutocompleteModule,
-    MatOptionModule,
-    ReactiveFormsModule,
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        LayoutModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatListModule,
+        MatTableModule,
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        MatAutocompleteModule,
+        MatOptionModule,
+        ReactiveFormsModule,
+        MatSelectModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,42 +1,35 @@
 <img src="../../assets/wsv_oh_logo2018-smallest.png" id="wsvLogo">
 <h1>Neue Eintragung</h1>
+<mat-label>Boot</mat-label>
 <mat-form-field appearance="fill">
-  <mat-label>Vorname</mat-label>
-  <input matInput [(ngModel)]="firstName">
-<!--  <mat-error *ngIf="validator.get('firstName').hasError('required')">
-    First Name is Required!
-  </mat-error>-->
-</mat-form-field>
-
-
-<mat-form-field appearance="fill">
-  <mat-label>Nachname</mat-label>
-  <input matInput [(ngModel)]="lastName">
-<!--  <mat-error *ngIf="validator.get('lastName').hasError('required')">
-    First Name is Required!
-  </mat-error>-->
-</mat-form-field>
-
-
-<mat-form-field appearance="fill">
-  <mat-label>Bootbezeichnung</mat-label>
+  <mat-label>Boot</mat-label>
   <input type="text"
          aria-label="Number"
          matInput
-         [formControl]="myControl"
+         [formControl]="boatForm"
          [matAutocomplete]="auto"
-         [(ngModel)]="bootbez">
+         [(ngModel)]="boot"
+         (ngModelChange)="createDriverFields()"
+  >
   <mat-autocomplete #auto="matAutocomplete">
-    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-      {{option}}
+    <mat-option *ngFor="let boot of boote" [value]="boot.name">
+      {{boot.name}} - {{boot.typeSeats}} - {{boot.nrOfSeats}}
     </mat-option>
   </mat-autocomplete>
 </mat-form-field>
 
+<mat-label *ngIf="showDriversTitle">Fahrer</mat-label>
+
+<mat-form-field appearance="fill" *ngFor="let driver of driversArray">
+  <mat-label>Fahrer {{driver}}</mat-label>
+    <input matInput [(ngModel)]="driverNames[driver]">
+</mat-form-field>
+
+<mat-label>Route</mat-label>
 
 <mat-form-field appearance="fill" >
   <mat-label>Ziel Ort</mat-label>
-  <input matInput [(ngModel)]="ort">
+  <input matInput [(ngModel)]="ort" [disabled]="!showDriversTitle">
 <!--  <mat-error *ngIf="validator.get('ort').hasError('required')">
     First Name is Required!
   </mat-error>-->
@@ -45,13 +38,13 @@
 
 <mat-form-field appearance="fill" >
   <mat-label>km-Anzahl</mat-label>
-  <input matInput type="number" [(ngModel)]="kmAnzahl">
+  <input matInput type="number" [(ngModel)]="kmAnzahl" [disabled]="!showDriversTitle">
 <!--  <mat-error *ngIf="validator.get('kmAnzahl').hasError('required')">
     First Name is Required!
   </mat-error>-->
 </mat-form-field>
 
-<button mat-stroked-button color="primary" (click)="addEntry()">Eingabe</button>
+<button mat-stroked-button color="primary" (click)="addEntry()">Los!</button>
 
 <br><br>
 

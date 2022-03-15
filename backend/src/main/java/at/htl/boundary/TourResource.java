@@ -72,6 +72,7 @@ public class TourResource {
     public Response deleteById(@PathParam("id") long id) {
         try{
             tr.deleteById(id);
+            tourClient.delete(id);
             return Response.noContent().build();
         } catch (IllegalArgumentException e){
             return Response.status(400).header("Reason", "Tour mit id " + id + " existiert nicht").build();

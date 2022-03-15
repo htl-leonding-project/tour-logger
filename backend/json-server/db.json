@@ -1,0 +1,13 @@
+{
+  "tours": [
+    {
+      "id": -1,
+      "destination": "",
+      "distance": -1,
+      "boat": {
+        "id": -1,
+        "name": "",
+        "nrOfSeats": -1
+    } }
+  ]
+}

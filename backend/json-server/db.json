@@ -8,6 +8,52 @@
         "id": -1,
         "name": "",
         "nrOfSeats": -1
-    } }
+      }
+    },
+    {
+      "boat": {
+        "name": "Luggy",
+        "nrOfSeats": 1,
+        "typeSeats": "Einer"
+      },
+      "destination": "Linz",
+      "distance": 20,
+      "drivers": [
+        null,
+        "Meris"
+      ],
+      "id": 0
+    },
+    {
+      "boat": {
+        "id": 48,
+        "name": "Anna& Niki",
+        "nrOfSeats": 2,
+        "typeSeats": "Zweier"
+      },
+      "destination": "dort",
+      "distance": 20,
+      "drivers": [
+        null,
+        "Rosi",
+        "Flo"
+      ],
+      "id": 1
+    },
+    {
+      "boat": {
+        "id": 49,
+        "name": "20er",
+        "nrOfSeats": 1,
+        "typeSeats": "Einer"
+      },
+      "destination": "Ort",
+      "distance": 1243,
+      "drivers": [
+        null,
+        "MERIS"
+      ],
+      "id": 2
+    }
   ]
 }

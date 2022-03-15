@@ -43,6 +43,9 @@ public class TourResource {
     public Response create(Tour tour, @Context UriInfo info) {
 
         tr.persist(tour);
+
+        tourClient.saveTour(tour);
+
         return Response.
                 created(URI.create(info.getPath() + "/" + tour.getId()))
                 .build();
